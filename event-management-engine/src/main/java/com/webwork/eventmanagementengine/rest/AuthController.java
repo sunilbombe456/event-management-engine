@@ -1,6 +1,7 @@
 package com.webwork.eventmanagementengine.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import com.webwork.eventmanagementengine.exception.UserNotFoundException;
 import com.webwork.eventmanagementengine.service.UserService;
 import com.webwork.eventmanagementengine.util.JwtUtil;
 
+
 @RestController
 public class AuthController {
 
@@ -27,11 +29,13 @@ public class AuthController {
 	@Autowired
 	private JwtUtil jwtUtil;
 	
+
 	@GetMapping("/")
 	public String sayHello() {
 		return "Hello Word";
 	}
 	
+
 	@PostMapping("/authenticate")
 	String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
 		

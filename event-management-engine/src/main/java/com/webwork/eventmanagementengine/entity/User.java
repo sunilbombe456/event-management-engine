@@ -34,6 +34,7 @@ public class User {
 
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_detail_id")
+
 	private UserDetails userDetails;
 
 	public User() {
@@ -44,6 +45,7 @@ public class User {
 		this.userPwd = userPwd;
 		this.role = role;
 		this.active = active;
+
 		this.userDetails = userDetails;
 	}
 
@@ -71,6 +73,7 @@ public class User {
 		this.userPwd = userPwd;
 	}
 
+
 	public String getRole() {
 		return role;
 	}
@@ -79,6 +82,7 @@ public class User {
 		this.role = role;
 	}
 
+
 	public int getActive() {
 		return active;
 	}
@@ -86,6 +90,7 @@ public class User {
 	public void setActive(int active) {
 		this.active = active;
 	}
+
 
 	public UserDetails getUserDetails() {
 		return userDetails;
@@ -97,8 +102,10 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", userPwd=" + userPwd + ", role=" + role + ", active="
-				+ active + ", userDetails=" + userDetails + "]";
+
+		return "User [id=" + id + ", userName=" + userName + ", userPwd=" + userPwd + ", active=" + active + ", role="
+				+ role + ", userDetails=" + userDetails + "]";
+
 	}
 
 }

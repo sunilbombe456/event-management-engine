@@ -1,3 +1,4 @@
+
 2020-22-22 16:22:30 [Thread-75] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-22-22 16:22:30 [Thread-75] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
 2020-22-22 16:22:30 [Thread-75] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-15 - Shutdown initiated...
@@ -59,3 +60,4 @@
 2020-23-22 16:23:13 [RMI TCP Connection(121)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
 2020-23-22 16:23:13 [RMI TCP Connection(121)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-17 - Shutdown initiated...
 2020-23-22 16:23:13 [RMI TCP Connection(121)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-17 - Shutdown completed.
+
