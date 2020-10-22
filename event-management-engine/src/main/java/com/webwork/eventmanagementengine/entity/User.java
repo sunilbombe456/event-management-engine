@@ -26,24 +26,26 @@ public class User {
 	@Column(name = "user_pwd")
 	private String userPwd;
 
-	@Column(name = "enabled")
-	private int active;
-
 	@Column(name = "authority")
 	private String role;
 
+	@Column(name = "enabled")
+	private int active;
+
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name="user_detail_id")
+	@JoinColumn(name = "user_detail_id")
+
 	private UserDetails userDetails;
 
 	public User() {
 	}
 
-	public User(String userName, String userPwd, int active, String role, UserDetails userDetails) {
+	public User(String userName, String userPwd, String role, int active, UserDetails userDetails) {
 		this.userName = userName;
 		this.userPwd = userPwd;
-		this.active = active;
 		this.role = role;
+		this.active = active;
+
 		this.userDetails = userDetails;
 	}
 
@@ -71,13 +73,6 @@ public class User {
 		this.userPwd = userPwd;
 	}
 
-	public int getActive() {
-		return active;
-	}
-
-	public void setActive(int active) {
-		this.active = active;
-	}
 
 	public String getRole() {
 		return role;
@@ -86,6 +81,16 @@ public class User {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+
+	public int getActive() {
+		return active;
+	}
+
+	public void setActive(int active) {
+		this.active = active;
+	}
+
 
 	public UserDetails getUserDetails() {
 		return userDetails;
@@ -97,8 +102,10 @@ public class User {
 
 	@Override
 	public String toString() {
+
 		return "User [id=" + id + ", userName=" + userName + ", userPwd=" + userPwd + ", active=" + active + ", role="
 				+ role + ", userDetails=" + userDetails + "]";
+
 	}
 
 }
