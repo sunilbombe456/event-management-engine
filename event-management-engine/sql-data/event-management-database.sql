@@ -20,14 +20,16 @@ CREATE TABLE `user_detail` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
+use `event-management-database`;
+
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(45) DEFAULT NULL,
   `user_pwd` varchar(45) DEFAULT NULL,
-   `enabled` tinyint(1) NOT NULL,
    `authority` varchar(50) NOT NULL,
+  `enabled` tinyint(1) NOT NULL,
   `user_detail_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_DETAIL_idx` (`user_detail_id`),

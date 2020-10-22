@@ -6,4 +6,6 @@ import com.webwork.eventmanagementengine.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+	User findByUserName(String username);
+
 }
