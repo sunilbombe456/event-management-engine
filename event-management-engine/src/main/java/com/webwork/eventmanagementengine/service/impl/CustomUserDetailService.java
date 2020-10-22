@@ -16,18 +16,15 @@ public class CustomUserDetailService implements UserDetailsService {
 
 	@Autowired
 	private UserRepository userRepo;
-	
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		
+
 		User user = userRepo.findByUserName(username);
-		
-		System.out.println("\n Username From UserRepo ===>" + username);
-		
-		System.out.println("\n User From UserRepo ===>" + user);
-		
-		return new org.springframework.security.core.userdetails.User(user.getUserName(),user.getUserPwd(), new ArrayList<>());
+
+		return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getUserPwd(),
+				new ArrayList<>());
 	}
 
 }

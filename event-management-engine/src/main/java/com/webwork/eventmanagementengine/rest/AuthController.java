@@ -35,7 +35,6 @@ public class AuthController {
 	@PostMapping("/authenticate")
 	String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
 		
-		System.out.print("===> username at Controller "+ authRequest);
 		
 		try {
 			authenticationManager.authenticate(
