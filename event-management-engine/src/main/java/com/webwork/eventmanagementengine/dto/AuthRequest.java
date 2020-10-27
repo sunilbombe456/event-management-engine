@@ -1,4 +1,4 @@
-package com.webwork.eventmanagementengine.entity;
+package com.webwork.eventmanagementengine.dto;
 
 public class AuthRequest {
 

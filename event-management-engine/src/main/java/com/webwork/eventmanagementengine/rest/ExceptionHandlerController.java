@@ -5,14 +5,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.webwork.eventmanagementengine.entity.ResponseError;
-import com.webwork.eventmanagementengine.exception.UserNotFoundException;
+import com.webwork.eventmanagementengine.dto.ResponseError;
+import com.webwork.eventmanagementengine.exception.AuthorizationException;
 
 @ControllerAdvice
-public class ExceptionController {
+public class ExceptionHandlerController {
 
 	@ExceptionHandler
-	public ResponseEntity<ResponseError> handleExcption(UserNotFoundException exc) {
+	public ResponseEntity<ResponseError> handleExcption(AuthorizationException exc) {
 
 		ResponseError error = new ResponseError();
 
@@ -24,9 +24,9 @@ public class ExceptionController {
 
 		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
 	}
-	
+
 	// To Handle all Kind of Exception
-	
+
 	@ExceptionHandler
 	public ResponseEntity<ResponseError> handleExcption(Exception exc) {
 
