@@ -34,7 +34,7 @@ public class UploadFileController {
 
 	}
 
-//	@PostMapping("/upload")
+//	@PostMapping(path="/upload",consumes="multipart/form-data")
 //	public ResponseEntity<ResponseMessage> uploadFiles(@RequestBody FormFileData form) {
 //		ResponseMessage message = new ResponseMessage();
 //

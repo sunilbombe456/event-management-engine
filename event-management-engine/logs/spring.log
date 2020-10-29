@@ -1,6 +1,671 @@
-2020-55-27 19:55:48 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Resolved [java.lang.RuntimeException: Could not store the file. Error: uploads\7-137abb94e0.jpg]
-2020-56-27 19:56:46 [RMI TCP Connection(75)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
-2020-56-27 19:56:47 [RMI TCP Connection(75)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-56-27 19:56:47 [RMI TCP Connection(75)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
-2020-56-27 19:56:47 [RMI TCP Connection(75)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-13 - Shutdown initiated...
-2020-56-27 19:56:47 [RMI TCP Connection(75)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-13 - Shutdown completed.
+2020-40-29 12:40:16 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-40-29 12:40:16 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-40-29 12:40:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-40-29 12:40:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-40-29 12:40:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-40-29 12:40:25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 325ms. Found 1 JPA repository interfaces.
+2020-40-29 12:40:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-40-29 12:40:29 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-40-29 12:40:29 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-40-29 12:40:29 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-40-29 12:40:29 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 12431 ms
+2020-40-29 12:40:30 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-40-29 12:40:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+2020-40-29 12:40:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+2020-40-29 12:40:33 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-40-29 12:40:33 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-40-29 12:40:34 [task-1] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-40-29 12:40:35 [task-1] INFO  o.h.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-40-29 12:40:36 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71333f16, org.springframework.security.web.context.SecurityContextPersistenceFilter@25f19158, org.springframework.security.web.header.HeaderWriterFilter@66c1d1ee, org.springframework.security.web.authentication.logout.LogoutFilter@74056fc0, com.webwork.eventmanagementengine.filter.JwtFilter@4da11c7f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@492be4de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1130c9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13484377, org.springframework.security.web.session.SessionManagementFilter@58939e15, org.springframework.security.web.access.ExceptionTranslationFilter@724fdcc5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@220edf25]
+2020-40-29 12:40:36 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-40-29 12:40:38 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-40-29 12:40:38 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-40-29 12:40:38 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-40-29 12:40:40 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-40-29 12:40:40 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-40-29 12:40:43 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-40-29 12:40:43 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 36.697 seconds (JVM running for 60.43)
+2020-43-29 12:43:22 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-43-29 12:43:22 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-43-29 12:43:22 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 19 ms
+2020-10-29 14:10:29 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-29 14:10:31 [Thread-7] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-29 14:10:31 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+2020-10-29 14:10:32 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+2020-10-29 14:10:41 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-10-29 14:10:41 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-10-29 14:10:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-29 14:10:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 43ms. Found 1 JPA repository interfaces.
+2020-10-29 14:10:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-10-29 14:10:48 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-10-29 14:10:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-29 14:10:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-10-29 14:10:48 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 6703 ms
+2020-10-29 14:10:49 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-29 14:10:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Starting...
+2020-10-29 14:10:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Start completed.
+2020-10-29 14:10:49 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-29 14:10:49 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-10-29 14:10:49 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-29 14:10:49 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@733acaaa, org.springframework.security.web.context.SecurityContextPersistenceFilter@55f8b476, org.springframework.security.web.header.HeaderWriterFilter@23c7f7b5, org.springframework.security.web.authentication.logout.LogoutFilter@2b149ffc, com.webwork.eventmanagementengine.filter.JwtFilter@431902e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b1108da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77f72052, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2001d7a, org.springframework.security.web.session.SessionManagementFilter@3d8e2d44, org.springframework.security.web.access.ExceptionTranslationFilter@7958e1e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69a83d2a]
+2020-10-29 14:10:49 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-29 14:10:49 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-29 14:10:49 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-10-29 14:10:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-29 14:10:49 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-10-29 14:10:49 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-10-29 14:10:49 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 8.697 seconds (JVM running for 5466.379)
+2020-10-29 14:10:49 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-11-29 14:11:09 [Thread-10] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-29 14:11:09 [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-29 14:11:09 [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown initiated...
+2020-11-29 14:11:09 [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown completed.
+2020-11-29 14:11:09 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-11-29 14:11:09 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-11-29 14:11:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-29 14:11:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 54ms. Found 1 JPA repository interfaces.
+2020-11-29 14:11:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-11-29 14:11:10 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-11-29 14:11:10 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-29 14:11:10 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-11-29 14:11:10 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 982 ms
+2020-11-29 14:11:10 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-29 14:11:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Starting...
+2020-11-29 14:11:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Start completed.
+2020-11-29 14:11:11 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-29 14:11:11 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-11-29 14:11:11 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-29 14:11:11 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@547e9867, org.springframework.security.web.context.SecurityContextPersistenceFilter@4dc535f0, org.springframework.security.web.header.HeaderWriterFilter@4954a5b5, org.springframework.security.web.authentication.logout.LogoutFilter@25f832b6, com.webwork.eventmanagementengine.filter.JwtFilter@374dfe20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ad043aa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66c53648, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24205a4a, org.springframework.security.web.session.SessionManagementFilter@444c7b06, org.springframework.security.web.access.ExceptionTranslationFilter@5f8455f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@367e74b8]
+2020-11-29 14:11:11 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-29 14:11:11 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-29 14:11:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-11-29 14:11:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-29 14:11:11 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-11-29 14:11:11 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-11-29 14:11:11 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.686 seconds (JVM running for 5488.094)
+2020-11-29 14:11:11 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-12-29 14:12:35 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-29 14:12:35 [Thread-15] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-29 14:12:35 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Shutdown initiated...
+2020-12-29 14:12:35 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Shutdown completed.
+2020-12-29 14:12:35 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-12-29 14:12:35 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-12-29 14:12:35 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-29 14:12:35 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 34ms. Found 1 JPA repository interfaces.
+2020-12-29 14:12:36 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-12-29 14:12:36 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-12-29 14:12:36 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-12-29 14:12:36 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-12-29 14:12:36 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 727 ms
+2020-12-29 14:12:36 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-29 14:12:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Starting...
+2020-12-29 14:12:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Start completed.
+2020-12-29 14:12:36 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-29 14:12:36 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-29 14:12:36 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-29 14:12:36 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d71b34e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1eadc05c, org.springframework.security.web.header.HeaderWriterFilter@6695fac3, org.springframework.security.web.authentication.logout.LogoutFilter@e088c20, com.webwork.eventmanagementengine.filter.JwtFilter@706af4b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fba2e57, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16b09481, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cad3d72, org.springframework.security.web.session.SessionManagementFilter@6521b5d4, org.springframework.security.web.access.ExceptionTranslationFilter@294d0375, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6cf3f32]
+2020-12-29 14:12:36 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-29 14:12:36 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-29 14:12:36 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-12-29 14:12:36 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-29 14:12:36 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-12-29 14:12:37 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-12-29 14:12:37 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.658 seconds (JVM running for 5573.739)
+2020-12-29 14:12:37 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-13-29 14:13:09 [Thread-20] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-13-29 14:13:09 [Thread-20] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-13-29 14:13:09 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown initiated...
+2020-13-29 14:13:09 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown completed.
+2020-13-29 14:13:10 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-13-29 14:13:10 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-13-29 14:13:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-13-29 14:13:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 35ms. Found 1 JPA repository interfaces.
+2020-13-29 14:13:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-13-29 14:13:10 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-13-29 14:13:10 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-13-29 14:13:10 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-13-29 14:13:10 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 695 ms
+2020-13-29 14:13:10 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-13-29 14:13:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Starting...
+2020-13-29 14:13:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Start completed.
+2020-13-29 14:13:11 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-13-29 14:13:11 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-13-29 14:13:11 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-13-29 14:13:11 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22db8009, org.springframework.security.web.context.SecurityContextPersistenceFilter@67250b8b, org.springframework.security.web.header.HeaderWriterFilter@1006bdb, org.springframework.security.web.authentication.logout.LogoutFilter@273c8df0, com.webwork.eventmanagementengine.filter.JwtFilter@78e463a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6146c7f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@631a26b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@645e899c, org.springframework.security.web.session.SessionManagementFilter@e00a367, org.springframework.security.web.access.ExceptionTranslationFilter@644c453c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50d1c29d]
+2020-13-29 14:13:11 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-13-29 14:13:11 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-13-29 14:13:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-13-29 14:13:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-13-29 14:13:11 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-13-29 14:13:11 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-13-29 14:13:11 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.758 seconds (JVM running for 5608.509)
+2020-13-29 14:13:11 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-14-29 14:14:37 [Thread-25] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-14-29 14:14:37 [Thread-25] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-14-29 14:14:37 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Shutdown initiated...
+2020-14-29 14:14:37 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-5 - Shutdown completed.
+2020-14-29 14:14:38 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-14-29 14:14:38 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-14-29 14:14:38 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-14-29 14:14:38 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 58ms. Found 1 JPA repository interfaces.
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-14-29 14:14:39 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-14-29 14:14:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-14-29 14:14:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 591 ms
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-14-29 14:14:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-6 - Starting...
+2020-14-29 14:14:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-6 - Start completed.
+2020-14-29 14:14:39 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-14-29 14:14:39 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-14-29 14:14:39 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@189ddbcf, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bf4d984, org.springframework.security.web.header.HeaderWriterFilter@61239e0f, org.springframework.security.web.authentication.logout.LogoutFilter@29e20d9c, com.webwork.eventmanagementengine.filter.JwtFilter@5eca3257, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@516a2f9e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cc4005a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f9c7296, org.springframework.security.web.session.SessionManagementFilter@2d2cb6ff, org.springframework.security.web.access.ExceptionTranslationFilter@521d172b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@651564fd]
+2020-14-29 14:14:39 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-14-29 14:14:39 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-14-29 14:14:39 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.502 seconds (JVM running for 5696.557)
+2020-14-29 14:14:39 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-17-29 14:17:38 [Thread-30] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-17-29 14:17:38 [Thread-30] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-17-29 14:17:38 [Thread-30] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-6 - Shutdown initiated...
+2020-17-29 14:17:38 [Thread-30] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-6 - Shutdown completed.
+2020-17-29 14:17:39 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-17-29 14:17:39 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-17-29 14:17:39 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-17-29 14:17:39 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 33ms. Found 1 JPA repository interfaces.
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-17-29 14:17:40 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-17-29 14:17:40 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-17-29 14:17:40 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 567 ms
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-17-29 14:17:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-7 - Starting...
+2020-17-29 14:17:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-7 - Start completed.
+2020-17-29 14:17:40 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-17-29 14:17:40 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-17-29 14:17:40 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-17-29 14:17:40 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-17-29 14:17:40 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3241e284, org.springframework.security.web.context.SecurityContextPersistenceFilter@363cc1aa, org.springframework.security.web.header.HeaderWriterFilter@33d69d81, org.springframework.security.web.authentication.logout.LogoutFilter@4bd9384e, com.webwork.eventmanagementengine.filter.JwtFilter@2f750d23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@728b1a87, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75b6bbc2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4458d6b, org.springframework.security.web.session.SessionManagementFilter@42159ea8, org.springframework.security.web.access.ExceptionTranslationFilter@4c811e54, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b8fced1]
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-17-29 14:17:40 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.143 seconds (JVM running for 5877.22)
+2020-17-29 14:17:40 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-17-29 14:17:51 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-17-29 14:17:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-17-29 14:17:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 24 ms
+2020-18-29 14:18:26 [Thread-35] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-18-29 14:18:26 [Thread-35] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-18-29 14:18:26 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-7 - Shutdown initiated...
+2020-18-29 14:18:26 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-7 - Shutdown completed.
+2020-18-29 14:18:27 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-18-29 14:18:27 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-18-29 14:18:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-18-29 14:18:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 44ms. Found 1 JPA repository interfaces.
+2020-18-29 14:18:27 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-18-29 14:18:27 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-18-29 14:18:27 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-18-29 14:18:27 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-18-29 14:18:27 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 707 ms
+2020-18-29 14:18:27 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-18-29 14:18:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-8 - Starting...
+2020-18-29 14:18:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-8 - Start completed.
+2020-18-29 14:18:28 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-18-29 14:18:28 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-18-29 14:18:28 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-18-29 14:18:28 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-18-29 14:18:28 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-18-29 14:18:28 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1df1e95c, org.springframework.security.web.context.SecurityContextPersistenceFilter@51e5c0d0, org.springframework.security.web.header.HeaderWriterFilter@51219410, org.springframework.security.web.authentication.logout.LogoutFilter@7d1db4f6, com.webwork.eventmanagementengine.filter.JwtFilter@4db3b132, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60209e46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3dfc1746, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4de05486, org.springframework.security.web.session.SessionManagementFilter@6f6a151a, org.springframework.security.web.access.ExceptionTranslationFilter@12f4601a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36d9e08]
+2020-18-29 14:18:28 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-18-29 14:18:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-18-29 14:18:28 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-18-29 14:18:28 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-18-29 14:18:28 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.428 seconds (JVM running for 5925.192)
+2020-18-29 14:18:28 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-18-29 14:18:53 [Thread-40] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-18-29 14:18:53 [Thread-40] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-18-29 14:18:53 [Thread-40] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-8 - Shutdown initiated...
+2020-18-29 14:18:53 [Thread-40] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-8 - Shutdown completed.
+2020-18-29 14:18:53 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-18-29 14:18:53 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-18-29 14:18:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-18-29 14:18:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-18-29 14:18:54 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-18-29 14:18:54 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-18-29 14:18:54 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-18-29 14:18:54 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-18-29 14:18:54 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 611 ms
+2020-18-29 14:18:54 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-18-29 14:18:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Starting...
+2020-18-29 14:18:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Start completed.
+2020-18-29 14:18:54 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-18-29 14:18:54 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-18-29 14:18:54 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-18-29 14:18:54 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-18-29 14:18:54 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-18-29 14:18:54 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72945f95, org.springframework.security.web.context.SecurityContextPersistenceFilter@5921d3a, org.springframework.security.web.header.HeaderWriterFilter@77e3c0ac, org.springframework.security.web.authentication.logout.LogoutFilter@621063bd, com.webwork.eventmanagementengine.filter.JwtFilter@566e4b76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31165cc8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58990ce6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b5be7b6, org.springframework.security.web.session.SessionManagementFilter@7e6a3444, org.springframework.security.web.access.ExceptionTranslationFilter@5bfde9a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b028caf]
+2020-18-29 14:18:54 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-18-29 14:18:54 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-18-29 14:18:54 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-18-29 14:18:55 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-18-29 14:18:55 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.553 seconds (JVM running for 5951.723)
+2020-18-29 14:18:55 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-19-29 14:19:03 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-19-29 14:19:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-19-29 14:19:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 8 ms
+2020-20-29 14:20:45 [Thread-45] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-20-29 14:20:45 [Thread-45] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-20-29 14:20:45 [Thread-45] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Shutdown initiated...
+2020-20-29 14:20:45 [Thread-45] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Shutdown completed.
+2020-20-29 14:20:45 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-20-29 14:20:45 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-20-29 14:20:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-20-29 14:20:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-20-29 14:20:46 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-20-29 14:20:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-20-29 14:20:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 573 ms
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-20-29 14:20:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-10 - Starting...
+2020-20-29 14:20:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-10 - Start completed.
+2020-20-29 14:20:46 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-20-29 14:20:46 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-20-29 14:20:46 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-20-29 14:20:46 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-20-29 14:20:46 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b779e05, org.springframework.security.web.context.SecurityContextPersistenceFilter@e2da65, org.springframework.security.web.header.HeaderWriterFilter@4e25dfa2, org.springframework.security.web.authentication.logout.LogoutFilter@3bd6b80, com.webwork.eventmanagementengine.filter.JwtFilter@691b45fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a247dbb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a1c6992, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34083b28, org.springframework.security.web.session.SessionManagementFilter@7243b550, org.springframework.security.web.access.ExceptionTranslationFilter@3745a329, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@639962ff]
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-20-29 14:20:46 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.25 seconds (JVM running for 6063.307)
+2020-20-29 14:20:46 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-21-29 14:21:04 [Thread-50] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-21-29 14:21:04 [Thread-50] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-21-29 14:21:04 [Thread-50] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-10 - Shutdown initiated...
+2020-21-29 14:21:04 [Thread-50] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-10 - Shutdown completed.
+2020-21-29 14:21:05 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-21-29 14:21:05 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-21-29 14:21:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-21-29 14:21:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-21-29 14:21:06 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-21-29 14:21:06 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-21-29 14:21:06 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 608 ms
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-21-29 14:21:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-11 - Starting...
+2020-21-29 14:21:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-11 - Start completed.
+2020-21-29 14:21:06 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-21-29 14:21:06 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-21-29 14:21:06 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-21-29 14:21:06 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-21-29 14:21:06 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@640965ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@51151319, org.springframework.security.web.header.HeaderWriterFilter@7fa5714, org.springframework.security.web.authentication.logout.LogoutFilter@67c54540, com.webwork.eventmanagementengine.filter.JwtFilter@34ae8ab4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64de43cc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31c9eab4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3519a0, org.springframework.security.web.session.SessionManagementFilter@4e8c3b72, org.springframework.security.web.access.ExceptionTranslationFilter@7098bcd3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@650e731]
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-21-29 14:21:06 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.48 seconds (JVM running for 6083.468)
+2020-21-29 14:21:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-24-29 14:24:09 [Thread-55] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-24-29 14:24:09 [Thread-55] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-24-29 14:24:09 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-11 - Shutdown initiated...
+2020-24-29 14:24:09 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-11 - Shutdown completed.
+2020-24-29 14:24:10 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-24-29 14:24:10 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-24-29 14:24:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-24-29 14:24:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-24-29 14:24:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-24-29 14:24:10 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-24-29 14:24:10 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-24-29 14:24:10 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-24-29 14:24:10 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 570 ms
+2020-24-29 14:24:10 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-24-29 14:24:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-12 - Starting...
+2020-24-29 14:24:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-12 - Start completed.
+2020-24-29 14:24:11 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-24-29 14:24:11 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-24-29 14:24:11 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-24-29 14:24:11 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fe3f130, org.springframework.security.web.context.SecurityContextPersistenceFilter@1846ebf5, org.springframework.security.web.header.HeaderWriterFilter@5ba2d8b9, org.springframework.security.web.authentication.logout.LogoutFilter@2e127e9c, com.webwork.eventmanagementengine.filter.JwtFilter@145f4467, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a9fed9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15038265, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19f709a2, org.springframework.security.web.session.SessionManagementFilter@5f09675c, org.springframework.security.web.access.ExceptionTranslationFilter@7a27410d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@468a92a3]
+2020-24-29 14:24:11 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-24-29 14:24:11 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-24-29 14:24:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-24-29 14:24:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-24-29 14:24:11 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-24-29 14:24:11 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-24-29 14:24:11 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.223 seconds (JVM running for 6268.148)
+2020-24-29 14:24:11 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-24-29 14:24:49 [Thread-60] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-24-29 14:24:49 [Thread-60] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-24-29 14:24:49 [Thread-60] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-12 - Shutdown initiated...
+2020-24-29 14:24:49 [Thread-60] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-12 - Shutdown completed.
+2020-24-29 14:24:49 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-24-29 14:24:49 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 31ms. Found 1 JPA repository interfaces.
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-24-29 14:24:50 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-24-29 14:24:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-24-29 14:24:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 563 ms
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-24-29 14:24:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-13 - Starting...
+2020-24-29 14:24:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-13 - Start completed.
+2020-24-29 14:24:50 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-24-29 14:24:50 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-24-29 14:24:50 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-24-29 14:24:50 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-24-29 14:24:50 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47cd4b62, org.springframework.security.web.context.SecurityContextPersistenceFilter@34140f7c, org.springframework.security.web.header.HeaderWriterFilter@434ee831, org.springframework.security.web.authentication.logout.LogoutFilter@22ebc4b0, com.webwork.eventmanagementengine.filter.JwtFilter@7f4a536, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47705780, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@734b303f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a3a558e, org.springframework.security.web.session.SessionManagementFilter@348cad5, org.springframework.security.web.access.ExceptionTranslationFilter@49ef137, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ef03010]
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-24-29 14:24:50 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.055 seconds (JVM running for 6307.373)
+2020-24-29 14:24:50 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-26-29 14:26:12 [Thread-65] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-26-29 14:26:12 [Thread-65] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-26-29 14:26:12 [Thread-65] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-13 - Shutdown initiated...
+2020-26-29 14:26:12 [Thread-65] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-13 - Shutdown completed.
+2020-26-29 14:26:13 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-26-29 14:26:13 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-26-29 14:26:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-26-29 14:26:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 45ms. Found 1 JPA repository interfaces.
+2020-26-29 14:26:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-26-29 14:26:13 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-26-29 14:26:13 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-26-29 14:26:13 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-26-29 14:26:13 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 609 ms
+2020-26-29 14:26:13 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-26-29 14:26:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-14 - Starting...
+2020-26-29 14:26:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-14 - Start completed.
+2020-26-29 14:26:13 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-26-29 14:26:13 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-26-29 14:26:13 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-26-29 14:26:14 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-26-29 14:26:14 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-26-29 14:26:14 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57b44223, org.springframework.security.web.context.SecurityContextPersistenceFilter@216ebfc9, org.springframework.security.web.header.HeaderWriterFilter@228ff57d, org.springframework.security.web.authentication.logout.LogoutFilter@b0e8637, com.webwork.eventmanagementengine.filter.JwtFilter@de81b6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@581c10eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e52288, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50aeb8de, org.springframework.security.web.session.SessionManagementFilter@295e6579, org.springframework.security.web.access.ExceptionTranslationFilter@2fcac83f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1663386a]
+2020-26-29 14:26:14 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-26-29 14:26:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-26-29 14:26:14 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-26-29 14:26:14 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-26-29 14:26:14 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.19 seconds (JVM running for 6390.935)
+2020-26-29 14:26:14 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-26-29 14:26:25 [Thread-70] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-26-29 14:26:25 [Thread-70] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-26-29 14:26:25 [Thread-70] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-14 - Shutdown initiated...
+2020-26-29 14:26:25 [Thread-70] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-14 - Shutdown completed.
+2020-26-29 14:26:25 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-26-29 14:26:25 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-26-29 14:26:25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-26-29 14:26:26 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-26-29 14:26:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-26-29 14:26:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 761 ms
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-26-29 14:26:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-15 - Starting...
+2020-26-29 14:26:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-15 - Start completed.
+2020-26-29 14:26:26 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-26-29 14:26:26 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-26-29 14:26:26 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-26-29 14:26:26 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-26-29 14:26:26 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@428e0cc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@5556a783, org.springframework.security.web.header.HeaderWriterFilter@bd77853, org.springframework.security.web.authentication.logout.LogoutFilter@603b0f72, com.webwork.eventmanagementengine.filter.JwtFilter@4ad08022, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37e23fa2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c7dced, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b0e1a0d, org.springframework.security.web.session.SessionManagementFilter@42c8b73a, org.springframework.security.web.access.ExceptionTranslationFilter@67b0acdf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b7dd93e]
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-26-29 14:26:26 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-26-29 14:26:27 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-26-29 14:26:27 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.383 seconds (JVM running for 6403.675)
+2020-26-29 14:26:27 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-33-29 14:33:26 [Thread-75] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-33-29 14:33:26 [Thread-75] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-33-29 14:33:26 [Thread-75] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-15 - Shutdown initiated...
+2020-33-29 14:33:26 [Thread-75] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-15 - Shutdown completed.
+2020-33-29 14:33:27 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-33-29 14:33:27 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-33-29 14:33:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-33-29 14:33:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 35ms. Found 1 JPA repository interfaces.
+2020-33-29 14:33:27 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-33-29 14:33:27 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-33-29 14:33:27 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-33-29 14:33:27 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-33-29 14:33:27 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 615 ms
+2020-33-29 14:33:27 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-33-29 14:33:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-16 - Starting...
+2020-33-29 14:33:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-16 - Start completed.
+2020-33-29 14:33:28 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-33-29 14:33:28 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-33-29 14:33:28 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-33-29 14:33:28 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-33-29 14:33:28 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-33-29 14:33:28 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72919383, org.springframework.security.web.context.SecurityContextPersistenceFilter@118c5e4, org.springframework.security.web.header.HeaderWriterFilter@320d97ff, org.springframework.security.web.authentication.logout.LogoutFilter@7624aaff, com.webwork.eventmanagementengine.filter.JwtFilter@3c1db6ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f2d6385, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3141a3f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a4b4c98, org.springframework.security.web.session.SessionManagementFilter@1e63cec2, org.springframework.security.web.access.ExceptionTranslationFilter@7af2853f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66f63602]
+2020-33-29 14:33:28 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-33-29 14:33:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-33-29 14:33:28 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-33-29 14:33:28 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-33-29 14:33:28 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.306 seconds (JVM running for 6825.112)
+2020-33-29 14:33:28 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-37-29 14:37:04 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-37-29 14:37:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-37-29 14:37:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 13 ms
+2020-41-29 14:41:44 [Thread-80] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-41-29 14:41:44 [Thread-80] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-41-29 14:41:44 [Thread-80] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-16 - Shutdown initiated...
+2020-41-29 14:41:44 [Thread-80] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-16 - Shutdown completed.
+2020-41-29 14:41:44 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-41-29 14:41:44 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-41-29 14:41:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-41-29 14:41:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 33ms. Found 1 JPA repository interfaces.
+2020-41-29 14:41:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-41-29 14:41:45 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-41-29 14:41:45 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-41-29 14:41:45 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-41-29 14:41:45 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 611 ms
+2020-41-29 14:41:45 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-41-29 14:41:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-17 - Starting...
+2020-41-29 14:41:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-17 - Start completed.
+2020-41-29 14:41:45 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-41-29 14:41:45 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-41-29 14:41:45 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-41-29 14:41:45 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-41-29 14:41:45 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-41-29 14:41:46 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b25249, org.springframework.security.web.context.SecurityContextPersistenceFilter@bb2c95f, org.springframework.security.web.header.HeaderWriterFilter@416828e8, org.springframework.security.web.authentication.logout.LogoutFilter@6e03ace3, com.webwork.eventmanagementengine.filter.JwtFilter@18bb25b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ae6b97e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ac9fba2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a910d0c, org.springframework.security.web.session.SessionManagementFilter@14a9bbe9, org.springframework.security.web.access.ExceptionTranslationFilter@1d979c53, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56ff7d99]
+2020-41-29 14:41:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-41-29 14:41:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-41-29 14:41:46 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-41-29 14:41:46 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-41-29 14:41:46 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.73 seconds (JVM running for 7323.231)
+2020-41-29 14:41:46 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-41-29 14:41:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-41-29 14:41:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-41-29 14:41:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 8 ms
+2020-44-29 14:44:20 [Thread-85] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-44-29 14:44:20 [Thread-85] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-44-29 14:44:20 [Thread-85] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-17 - Shutdown initiated...
+2020-44-29 14:44:20 [Thread-85] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-17 - Shutdown completed.
+2020-44-29 14:44:20 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-44-29 14:44:20 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 34ms. Found 1 JPA repository interfaces.
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-44-29 14:44:21 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-44-29 14:44:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-44-29 14:44:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 681 ms
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-44-29 14:44:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-18 - Starting...
+2020-44-29 14:44:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-18 - Start completed.
+2020-44-29 14:44:21 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-44-29 14:44:21 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-44-29 14:44:21 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-44-29 14:44:21 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-44-29 14:44:21 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d86a503, org.springframework.security.web.context.SecurityContextPersistenceFilter@44374334, org.springframework.security.web.header.HeaderWriterFilter@557d037f, org.springframework.security.web.authentication.logout.LogoutFilter@21322a20, com.webwork.eventmanagementengine.filter.JwtFilter@7e6b845, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ef73d33, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@432cbf69, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b59d103, org.springframework.security.web.session.SessionManagementFilter@6b1ef98e, org.springframework.security.web.access.ExceptionTranslationFilter@495e648d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b5869b0]
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-44-29 14:44:21 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.378 seconds (JVM running for 7478.575)
+2020-44-29 14:44:21 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-44-29 14:44:32 [Thread-90] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-44-29 14:44:32 [Thread-90] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-44-29 14:44:32 [Thread-90] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-18 - Shutdown initiated...
+2020-44-29 14:44:32 [Thread-90] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-18 - Shutdown completed.
+2020-44-29 14:44:32 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-44-29 14:44:32 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 43ms. Found 1 JPA repository interfaces.
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-44-29 14:44:33 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-44-29 14:44:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-44-29 14:44:33 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 601 ms
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-44-29 14:44:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-19 - Starting...
+2020-44-29 14:44:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-19 - Start completed.
+2020-44-29 14:44:33 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-44-29 14:44:33 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-44-29 14:44:33 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-44-29 14:44:33 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-44-29 14:44:33 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c3e081a, org.springframework.security.web.context.SecurityContextPersistenceFilter@20785948, org.springframework.security.web.header.HeaderWriterFilter@62377304, org.springframework.security.web.authentication.logout.LogoutFilter@6acc3b54, com.webwork.eventmanagementengine.filter.JwtFilter@73134b9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11f5a83e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48035657, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@763ee8b2, org.springframework.security.web.session.SessionManagementFilter@6c559150, org.springframework.security.web.access.ExceptionTranslationFilter@1ff5c930, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3eddccfe]
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-44-29 14:44:33 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.218 seconds (JVM running for 7490.554)
+2020-44-29 14:44:33 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-44-29 14:44:40 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-44-29 14:44:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-44-29 14:44:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 5 ms
+2020-49-29 14:49:13 [Thread-95] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-49-29 14:49:13 [Thread-95] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-49-29 14:49:13 [Thread-95] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-19 - Shutdown initiated...
+2020-49-29 14:49:13 [Thread-95] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-19 - Shutdown completed.
+2020-49-29 14:49:14 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-49-29 14:49:14 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-49-29 14:49:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-49-29 14:49:15 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-49-29 14:49:15 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-49-29 14:49:15 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 673 ms
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-49-29 14:49:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-20 - Starting...
+2020-49-29 14:49:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-20 - Start completed.
+2020-49-29 14:49:15 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-49-29 14:49:15 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-49-29 14:49:15 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-49-29 14:49:15 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-49-29 14:49:15 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@adb77af, org.springframework.security.web.context.SecurityContextPersistenceFilter@593a4025, org.springframework.security.web.header.HeaderWriterFilter@46cdfed8, org.springframework.security.web.authentication.logout.LogoutFilter@7ab9f18c, com.webwork.eventmanagementengine.filter.JwtFilter@49bef9d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21ce2b0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8dc2ad3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61fd95a5, org.springframework.security.web.session.SessionManagementFilter@58343303, org.springframework.security.web.access.ExceptionTranslationFilter@276bfce2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3357e39b]
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-49-29 14:49:15 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.338 seconds (JVM running for 7772.458)
+2020-49-29 14:49:15 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-50-29 14:50:21 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-50-29 14:50:21 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-50-29 14:50:21 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 14 ms
+2020-52-29 14:52:04 [Thread-100] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-52-29 14:52:04 [Thread-100] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-52-29 14:52:04 [Thread-100] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-20 - Shutdown initiated...
+2020-52-29 14:52:04 [Thread-100] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-20 - Shutdown completed.
+2020-52-29 14:52:04 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-52-29 14:52:04 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-52-29 14:52:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-52-29 14:52:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 34ms. Found 1 JPA repository interfaces.
+2020-52-29 14:52:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-52-29 14:52:05 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-52-29 14:52:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-52-29 14:52:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-52-29 14:52:05 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 893 ms
+2020-52-29 14:52:05 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-52-29 14:52:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-21 - Starting...
+2020-52-29 14:52:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-21 - Start completed.
+2020-52-29 14:52:05 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-52-29 14:52:05 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-52-29 14:52:05 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-52-29 14:52:05 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-52-29 14:52:05 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-52-29 14:52:05 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6310f515, org.springframework.security.web.context.SecurityContextPersistenceFilter@5bcaf734, org.springframework.security.web.header.HeaderWriterFilter@6cb0399, org.springframework.security.web.authentication.logout.LogoutFilter@79f37440, com.webwork.eventmanagementengine.filter.JwtFilter@7609cd31, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23db0074, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7dd2185d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8baaf1f, org.springframework.security.web.session.SessionManagementFilter@62ad5f6a, org.springframework.security.web.access.ExceptionTranslationFilter@7fc0e53c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72e22ab3]
+2020-52-29 14:52:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-52-29 14:52:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-52-29 14:52:06 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-52-29 14:52:06 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-52-29 14:52:06 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.646 seconds (JVM running for 7942.872)
+2020-52-29 14:52:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-52-29 14:52:57 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-52-29 14:52:57 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-52-29 14:52:57 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 8 ms
+2020-52-29 14:52:58 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-53-29 14:53:12 [Thread-105] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-53-29 14:53:12 [Thread-105] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-53-29 14:53:12 [Thread-105] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-21 - Shutdown initiated...
+2020-53-29 14:53:12 [Thread-105] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-21 - Shutdown completed.
+2020-53-29 14:53:12 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-53-29 14:53:12 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-53-29 14:53:12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-53-29 14:53:12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-53-29 14:53:13 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-53-29 14:53:13 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-53-29 14:53:13 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 556 ms
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-53-29 14:53:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-22 - Starting...
+2020-53-29 14:53:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-22 - Start completed.
+2020-53-29 14:53:13 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-53-29 14:53:13 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-53-29 14:53:13 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-53-29 14:53:13 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-53-29 14:53:13 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2566f249, org.springframework.security.web.context.SecurityContextPersistenceFilter@a24f91, org.springframework.security.web.header.HeaderWriterFilter@44ce8d3b, org.springframework.security.web.authentication.logout.LogoutFilter@3e9e634, com.webwork.eventmanagementengine.filter.JwtFilter@42256f42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a8e758f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a9984b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b29ea4d, org.springframework.security.web.session.SessionManagementFilter@73d91bce, org.springframework.security.web.access.ExceptionTranslationFilter@2bd63c06, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34d24658]
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-53-29 14:53:13 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.11 seconds (JVM running for 8010.214)
+2020-53-29 14:53:13 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-53-29 14:53:18 [Thread-110] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-53-29 14:53:18 [Thread-110] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-53-29 14:53:18 [Thread-110] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-22 - Shutdown initiated...
+2020-53-29 14:53:18 [Thread-110] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-22 - Shutdown completed.
+2020-53-29 14:53:18 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Starting EventManagementEngineApplication on DESKTOP-3G0RS21 with PID 16408 (C:\Users\rahul\git\event-management-engine\event-management-engine\target\classes started by rahul in C:\Users\rahul\git\event-management-engine\event-management-engine)
+2020-53-29 14:53:18 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -No active profile set, falling back to default profiles: default
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2020-53-29 14:53:19 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2020-53-29 14:53:19 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-53-29 14:53:19 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 549 ms
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 'applicationTaskExecutor'
+2020-53-29 14:53:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-23 - Starting...
+2020-53-29 14:53:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-23 - Start completed.
+2020-53-29 14:53:19 [task-1] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-53-29 14:53:19 [task-1] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-53-29 14:53:19 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-53-29 14:53:19 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-53-29 14:53:19 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66164227, org.springframework.security.web.context.SecurityContextPersistenceFilter@564807f4, org.springframework.security.web.header.HeaderWriterFilter@42b08625, org.springframework.security.web.authentication.logout.LogoutFilter@49a02c4f, com.webwork.eventmanagementengine.filter.JwtFilter@55b19cf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ad41c40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c133091, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cb0b67c, org.springframework.security.web.session.SessionManagementFilter@713e5dea, org.springframework.security.web.access.ExceptionTranslationFilter@5d9312c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c686e47]
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path ''
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Triggering deferred initialization of Spring Data repositories…
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener -Spring Data repositories initialized!
+2020-53-29 14:53:19 [restartedMain] INFO  c.w.e.EventManagementEngineApplication -Started EventManagementEngineApplication in 1.061 seconds (JVM running for 8016.416)
+2020-53-29 14:53:19 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+2020-53-29 14:53:23 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-53-29 14:53:23 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+2020-53-29 14:53:23 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 6 ms

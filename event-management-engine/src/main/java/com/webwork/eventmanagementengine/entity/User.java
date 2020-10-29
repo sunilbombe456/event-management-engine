@@ -1,5 +1,9 @@
 package com.webwork.eventmanagementengine.entity;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -26,26 +32,24 @@ public class User {
 	@Column(name = "user_pwd")
 	private String userPwd;
 
-	@Column(name = "authority")
-	private String role;
-
 	@Column(name = "enabled")
-	private int active;
+	private boolean active;
 
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_detail_id")
-
 	private UserDetails userDetails;
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+	private Set<Roles> roles = new HashSet<>();
 
 	public User() {
 	}
 
-	public User(String userName, String userPwd, String role, int active, UserDetails userDetails) {
+	public User(String userName, String userPwd, boolean active, UserDetails userDetails) {
 		this.userName = userName;
 		this.userPwd = userPwd;
-		this.role = role;
 		this.active = active;
-
 		this.userDetails = userDetails;
 	}
 
@@ -73,24 +77,13 @@ public class User {
 		this.userPwd = userPwd;
 	}
 
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
-
-	public int getActive() {
+	public boolean isActive() {
 		return active;
 	}
 
-	public void setActive(int active) {
+	public void setActive(boolean active) {
 		this.active = active;
 	}
-
 
 	public UserDetails getUserDetails() {
 		return userDetails;
@@ -100,12 +93,18 @@ public class User {
 		this.userDetails = userDetails;
 	}
 
+	public Set<Roles> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Roles> roles) {
+		this.roles = roles;
+	}
+
 	@Override
 	public String toString() {
-
-		return "User [id=" + id + ", userName=" + userName + ", userPwd=" + userPwd + ", active=" + active + ", role="
-				+ role + ", userDetails=" + userDetails + "]";
-
+		return "User [id=" + id + ", userName=" + userName + ", userPwd=" + userPwd + ", active=" + active
+				+ ", userDetails=" + userDetails + ", roles=" + roles + "]";
 	}
 
 }
