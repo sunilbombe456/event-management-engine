@@ -1,9 +1,6 @@
 package com.webwork.eventmanagementengine.service.impl;
 
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -17,14 +14,27 @@ public class CustomUserDetailService implements UserDetailsService {
 	@Autowired
 	private UserRepository userRepo;
 
+//	@Override
+//	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//		// TODO Auto-generated method stub
+//
+//		User user = userRepo.findByUserName(username);
+//		if(user == null) {
+//			throw new UsernameNotFoundException("User NoT found..!");
+//		}
+//		return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getUserPwd(),
+//				new ArrayList<>());
+//	}
+
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	public UserDetailServiceImpl loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 
 		User user = userRepo.findByUserName(username);
-
-		return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getUserPwd(),
-				new ArrayList<>());
+		if (user == null) {
+			throw new UsernameNotFoundException("User NoT found..!");
+		}
+		return new UserDetailServiceImpl(user);
 	}
 
 }

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,6 +18,8 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import com.webwork.eventmanagementengine.dto.ResponseError;
+import com.webwork.eventmanagementengine.exception.AuthorizationException;
 import com.webwork.eventmanagementengine.service.impl.CustomUserDetailService;
 import com.webwork.eventmanagementengine.util.JwtUtil;
 
@@ -44,8 +47,21 @@ public class JwtFilter extends OncePerRequestFilter {
 		if (null != authorizationHeader) {
 
 			token = authorizationHeader;
-			userName = jwtUtil.extractUsername(token);
+			
+			// here we handle filter exception
+			try {
+				userName = jwtUtil.extractUsername(token);
+			}catch(AuthorizationException e) {
+				ResponseError error = new ResponseError();
+				error.setStatus(HttpStatus.NOT_FOUND.value());
+				error.setMessage(e.getMessage());
+				error.setTimeStamp(System.currentTimeMillis());
+				response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+	            response.getWriter().print(error);
+				
+			}
 
+			// catch the filter exception
 		}
 
 		if (userName != null && SecurityContextHolder.getContext().getAuthentication() == null) {
