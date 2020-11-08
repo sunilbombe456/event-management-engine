@@ -61,13 +61,13 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()
-		.antMatchers("/authenticate")
+		.antMatchers("/public/event/1/0/**")
 		.permitAll()
-		.antMatchers("/Admin/**").hasRole("ADMIN")
-		.antMatchers("/Event/**").hasRole("USER")
+		.antMatchers("/private/event/1/0/Admin/**").hasRole("ADMIN")
+		.antMatchers("/User/**").hasRole("USER")
 		.anyRequest().authenticated()
 		.and().exceptionHandling()
-		.accessDeniedPage("/access-denied")
+		.accessDeniedPage("/public/event/1/0/access-denied")
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		
 		http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
