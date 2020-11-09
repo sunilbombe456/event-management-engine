@@ -1,23 +1,35 @@
 package com.webwork.eventmanagementengine.rest;
 
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webwork.eventmanagementengine.dto.AuthRequest;
 import com.webwork.eventmanagementengine.dto.ResponseError;
 import com.webwork.eventmanagementengine.entity.User;
 import com.webwork.eventmanagementengine.exception.UserNotFoundException;
+import com.webwork.eventmanagementengine.repository.UserDetailsRepository;
+import com.webwork.eventmanagementengine.repository.UserRepository;
+import com.webwork.eventmanagementengine.service.FileStorageService;
 import com.webwork.eventmanagementengine.service.UserService;
 import com.webwork.eventmanagementengine.util.JwtUtil;
 
 @RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/public/event/1/0")
 public class AuthController {
 
 	@Autowired
@@ -25,6 +37,15 @@ public class AuthController {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private FileStorageService storageService;
+	
+	@Autowired 
+	private UserRepository userRepo;
+	
+	@Autowired
+	private UserDetailsRepository userDetailsRepo;
 
 	@Autowired
 	private JwtUtil jwtUtil;
@@ -35,7 +56,7 @@ public class AuthController {
 	}
 
 	@PostMapping("/authenticate")
-	String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
+	public String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
 
 		try {
 			authenticationManager.authenticate(
@@ -48,15 +69,28 @@ public class AuthController {
 		return jwtUtil.generateToken(authRequest.getUserName());
 
 	}
-
-	@GetMapping("/save")
-	public User save() {
-		String username = null;
-		if (username == null) {
-			throw new UserNotFoundException("User Not Found");
+	
+	@PostMapping("/signup")
+	public String signUp(@RequestBody AuthRequest authRequest) throws Exception {
+		if(userRepo.existsByUserName(authRequest.getUserName())) {
+			throw new UserNotFoundException("username is already Exists..!");
+		}else if(userDetailsRepo.existsByEmail(authRequest.getEmail())){
+			throw new UserNotFoundException("Email is already Exists..!");
 		}
-		return null;
+		 User user = userService.signUp(authRequest);
+		 try {
+				authenticationManager.authenticate(
+						new UsernamePasswordAuthenticationToken(authRequest.getUserName(), authRequest.getPassword()));
+
+			} catch (Exception ex) {
+				throw new Exception("invalid username/password");
+			}
+
+			return jwtUtil.generateToken(authRequest.getUserName());
 	}
+	
+	
+
 	
 	@GetMapping("/access-denied")
 	public ResponseEntity<ResponseError> accessDenied(){

@@ -1,9 +1,17 @@
 package com.webwork.eventmanagementengine.rest;
 
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -12,6 +20,8 @@ import com.webwork.eventmanagementengine.dto.ResponseMessage;
 import com.webwork.eventmanagementengine.service.FileStorageService;
 
 @RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/public/event/1/0")
 public class UploadFileController {
 	@Autowired
 	FileStorageService storageService;
@@ -23,7 +33,6 @@ public class UploadFileController {
 		
 		if(null != file) {
 			message.setMessage("File uploaded successfully..>");
-			
 			storageService.save(file);
 			
 		}else {
@@ -47,5 +56,20 @@ public class UploadFileController {
 //
 //		return new ResponseEntity<>(message, HttpStatus.OK);
 //	}
+	
+	@GetMapping("/load/{fileName}")
+	public Resource loadFile(@PathVariable String fileName) {
+		return storageService.load(fileName);
+	}
+	
+	@GetMapping("/load/all")
+	public Stream<Path> loadFile() {
+		return storageService.loadAll();
+	}
+	
+	@GetMapping("/delete/all")
+	public void deleteFile() {
+		storageService.deleteAll();
+	}
 
 }
