@@ -14,3 +14,7 @@ CREATE TABLE `users` (
   REFERENCES `user_detail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
+INSERT INTO `users` (`id`,`user_name`,`user_pwd`,`enabled`,`user_detail_id`) VALUES (1,'sunilbombe456','sunil',1,1);
+INSERT INTO `users` (`id`,`user_name`,`user_pwd`,`enabled`,`user_detail_id`) VALUES (2,'ganeshbombe','ganesh',1,2);
+INSERT INTO `users` (`id`,`user_name`,`user_pwd`,`enabled`,`user_detail_id`) VALUES (3,'sahildabhade','sahil',1,3);
+INSERT INTO `users` (`id`,`user_name`,`user_pwd`,`enabled`,`user_detail_id`) VALUES (4,'nikhilkhale','nikhil',1,4);
