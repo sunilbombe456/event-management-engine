@@ -1,11 +1,16 @@
 package com.webwork.eventmanagementengine.rest;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +30,8 @@ import com.webwork.eventmanagementengine.service.FileStorageService;
 public class UploadFileController {
 	@Autowired
 	FileStorageService storageService;
+	
+	private final Path root = Paths.get("uploads/images");
 
 	@PostMapping("/upload")
 	public ResponseEntity<ResponseMessage> uploadFiles(@RequestParam("file") MultipartFile file) {
@@ -38,6 +45,31 @@ public class UploadFileController {
 		}else {
 			message.setMessage("File NOT  uploaded successfully..>");
 		}
+		
+		return new ResponseEntity<>(message, HttpStatus.OK);
+
+	}
+	
+	@PostMapping("/upload/multiple")
+	public ResponseEntity<ResponseMessage> uploadMultipleFiles(@RequestParam("file") List<MultipartFile> file) {
+		
+		ResponseMessage message = new ResponseMessage();
+		int uploadCount= 0;
+		
+		if(!file.isEmpty()) {
+			
+			for(MultipartFile f: file) {
+				storageService.save(f);
+				uploadCount++;
+			}
+			
+			message.setMessage(uploadCount+" Files uploaded successfully..>");
+			
+		}else {
+			message.setMessage("File NOT  uploaded successfully..>");
+		}
+		
+		
 		
 		return new ResponseEntity<>(message, HttpStatus.OK);
 
@@ -56,11 +88,11 @@ public class UploadFileController {
 //
 //		return new ResponseEntity<>(message, HttpStatus.OK);
 //	}
-	
-	@GetMapping("/load/{fileName}")
-	public Resource loadFile(@PathVariable String fileName) {
-		return storageService.load(fileName);
-	}
+//	
+//	@GetMapping("/load/{fileName}")
+//	public Resource loadFile(@PathVariable String fileName) {
+//		return storageService.load(fileName);
+//	}
 	
 	@GetMapping("/load/all")
 	public Stream<Path> loadFile() {
@@ -70,6 +102,13 @@ public class UploadFileController {
 	@GetMapping("/delete/all")
 	public void deleteFile() {
 		storageService.deleteAll();
+	}
+	
+	@RequestMapping(value="/load/{fileName}", produces = MediaType.IMAGE_JPEG_VALUE)
+	public byte[] load(@PathVariable String fileName) throws IOException {
+		File file = new File(this.root.toString()+"/"+ fileName);
+		System.out.println("\n==>"+this.root.toString()+"/"+ fileName);
+		return Files.readAllBytes(file.toPath());
 	}
 
 }

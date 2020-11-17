@@ -69,5 +69,14 @@ public class UserDetailServiceImpl implements UserDetails {
 		// TODO Auto-generated method stub
 		return user.isActive();
 	}
+	
+	// new Added
+	public String getEmail() {
+		return user.getUserDetails().getEmail();
+	}
+	
+	public int getId() {
+		return user.getId();
+	}
 
 }

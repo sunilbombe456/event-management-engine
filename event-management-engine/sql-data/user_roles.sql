@@ -21,3 +21,10 @@ CREATE TABLE `user_roles` (
 
 SET FOREIGN_KEY_CHECKS = 1;
 
+INSERT INTO `user_roles` (`user_id`,`role_id`) VALUES (1,1);
+INSERT INTO `user_roles` (`user_id`,`role_id`) VALUES (1,2);
+INSERT INTO `user_roles` (`user_id`,`role_id`) VALUES (1,3);
+INSERT INTO `user_roles` (`user_id`,`role_id`) VALUES (2,2);
+INSERT INTO `user_roles` (`user_id`,`role_id`) VALUES (3,3);
+INSERT INTO `user_roles` (`user_id`,`role_id`) VALUES (4,1);
+INSERT INTO `user_roles` (`user_id`,`role_id`) VALUES (4,2);
