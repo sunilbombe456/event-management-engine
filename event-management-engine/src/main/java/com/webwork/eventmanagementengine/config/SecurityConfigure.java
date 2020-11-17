@@ -58,6 +58,8 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter {
 //		http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 //	}
 	
+	
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()

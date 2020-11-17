@@ -1,12 +1,12 @@
 package com.webwork.eventmanagementengine.service.impl;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
-
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import com.webwork.eventmanagementengine.service.FileStorageService;
 @Service
 public class FileStorageServiceImpl implements FileStorageService {
 
-	private final Path root = Paths.get("uploads");
+	private final Path root = Paths.get("uploads/images");
 
 	@Override
 	public void init() {
@@ -58,6 +58,8 @@ public class FileStorageServiceImpl implements FileStorageService {
 			throw new RuntimeException("Error: " + e.getMessage());
 		}
 	}
+	
+	
 
 	@Override
 	public void deleteAll() {

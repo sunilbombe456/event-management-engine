@@ -1,6 +1,7 @@
 package com.webwork.eventmanagementengine.filter;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -16,6 +17,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.webwork.eventmanagementengine.dto.ResponseError;
@@ -35,11 +37,13 @@ public class JwtFilter extends OncePerRequestFilter {
 	private CustomUserDetailService customUserDetailService;
 
 	@Override
+	@CrossOrigin(origins="*")
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 
-		String authorizationHeader = request.getHeader("Authorization");
+		String authorizationHeader = request.getHeader("authorization");
 
 		String token = null;
 		String userName = null;
@@ -76,6 +80,7 @@ public class JwtFilter extends OncePerRequestFilter {
 						.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
 				SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+				
 			}
 
 		}
