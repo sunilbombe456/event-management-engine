@@ -1,7 +1,6 @@
 package com.webwork.event.management.filter;
 
 import java.io.IOException;
-import java.util.Enumeration;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

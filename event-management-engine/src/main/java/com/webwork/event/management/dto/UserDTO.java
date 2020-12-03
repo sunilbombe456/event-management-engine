@@ -2,12 +2,8 @@ package com.webwork.event.management.dto;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.Id;
-
-import com.webwork.event.management.entity.Roles;
-import com.webwork.event.management.entity.UserDetails;
 
 public class UserDTO {
 
@@ -42,6 +38,15 @@ public class UserDTO {
 		this.userName = userName;
 		this.email = email;
 		this.roles = roles;
+	}
+	
+	public UserDTO(int id, String token, String userName, String email, List<String> roles, boolean active) {
+		this.id = id;
+		this.token = token;
+		this.userName = userName;
+		this.email = email;
+		this.roles = roles;
+		this.active = active;
 	}
 
 	public int getId() {

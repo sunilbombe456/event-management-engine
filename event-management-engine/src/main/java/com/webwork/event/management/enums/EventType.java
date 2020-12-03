@@ -1,7 +1,7 @@
-package com.webwork.event.management.dto;
+package com.webwork.event.management.enums;
 
 public enum EventType {
-	WEDDING,
+
 	BIRTHDAY,
 	RECEPTION,
 	SEMINAR,
@@ -11,5 +11,6 @@ public enum EventType {
 	CEREMONIES_GALAS,
 	VIP_EVENTS,
 	JOB_FAIRS,
-	RECRUITING_EVENTS
+	RECRUITING_EVENTS,
+	WEDDING
 }

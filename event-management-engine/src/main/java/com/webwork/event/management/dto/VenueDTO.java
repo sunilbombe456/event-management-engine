@@ -3,30 +3,47 @@ package com.webwork.event.management.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 import com.webwork.event.management.entity.Images;
+import com.webwork.event.management.enums.EventType;
 
 
 public class VenueDTO {
 	
+	@Id
 	private String id;
 
+	@NotBlank(message="Name Should not be Empty")
 	private String name;
 
+	@NotNull(message="Address Should not be Empty")
 	private Address address;
 
+	@NotNull(message="Images Should not be Empty.")
 	private List<Images> imagesFile = new ArrayList<>();
 
 	private int rId;
 
-	private String eventType;
+	@Enumerated(EnumType.STRING)
+	private List<EventType> eventType = new ArrayList<>();
 
+	@Min(100)
 	private int peopleCapacity;
 
 	public VenueDTO() {
 	}
 
-	public VenueDTO(String name, Address address, List<Images> imagesFile, int rId, String eventType,
-			int peopleCapacity) {
+	public VenueDTO(String id, @NotBlank(message = "Name Should not be Empty") String name,
+			@NotNull(message = "Address Should not be Empty") Address address,
+			@NotNull(message = "Images Should not be Empty.") List<Images> imagesFile, int rId,
+			List<EventType> eventType, @Min(100) int peopleCapacity) {
+		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.imagesFile = imagesFile;
@@ -75,11 +92,11 @@ public class VenueDTO {
 		this.rId = rId;
 	}
 
-	public String getEventType() {
+	public List<EventType> getEventType() {
 		return eventType;
 	}
 
-	public void setEventType(String eventType) {
+	public void setEventType(List<EventType> eventType) {
 		this.eventType = eventType;
 	}
 
@@ -96,6 +113,8 @@ public class VenueDTO {
 		return "VenueDTO [id=" + id + ", name=" + name + ", address=" + address + ", imagesFile=" + imagesFile
 				+ ", rId=" + rId + ", eventType=" + eventType + ", peopleCapacity=" + peopleCapacity + "]";
 	}
+	
+	
 
-
+	
 }
