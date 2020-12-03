@@ -1,4 +1,4 @@
-package com.webwork.event.management.entity;
+package com.webwork.event.management.dto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,11 @@ import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.webwork.event.management.entity.Images;
 import com.webwork.event.management.enums.EventType;
 
 @Document
-public class Decoration {
+public class DecorationDTO {
 
 	@Id
 	private String id;
@@ -29,10 +30,10 @@ public class Decoration {
 	
 	private int rId;
 
-	public Decoration() {
+	public DecorationDTO() {
 	}
 
-	public Decoration(String name, String description, String decorationSize, int price, List<EventType> eventType,
+	public DecorationDTO(String name, String description, String decorationSize, int price, List<EventType> eventType,
 			List<Images> imagesFile, int rId) {
 		this.name = name;
 		this.description = description;
@@ -45,7 +46,7 @@ public class Decoration {
 	
 	
 
-	public Decoration(String id, String name, String description, String decorationSize, int price,
+	public DecorationDTO(String id, String name, String description, String decorationSize, int price,
 			List<EventType> eventType, List<Images> imagesFile, int rId) {
 		this.id = id;
 		this.name = name;

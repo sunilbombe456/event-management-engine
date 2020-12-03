@@ -12,7 +12,9 @@ public class Images {
 
 	private String name;
 
-	private String urls = "http://localhost:8080/public/event/1/0/load/";
+	private String urls = "http://localhost:8080/public/event/1/0/files/load/";
+
+	private String encodedUrls = "http://localhost:8080/public/event/1/0/files/load/encoded/";
 
 	public Images() {
 	}
@@ -20,6 +22,7 @@ public class Images {
 	public Images(String name) {
 		this.name = name;
 		this.urls += name;
+		this.encodedUrls += name;
 	}
 
 	public String getId() {
@@ -37,6 +40,7 @@ public class Images {
 	public void setName(String name) {
 		this.name = name;
 		this.urls += name;
+		this.encodedUrls += name;
 	}
 
 	public String getUrls() {
@@ -47,9 +51,18 @@ public class Images {
 		this.urls = urls;
 	}
 
-	@Override
-	public String toString() {
-		return "Images [id=" + id + ", name=" + name + "]";
+	public String getEncodedUrls() {
+		return encodedUrls;
 	}
 
+	public void setEncodedUrls(String encodedUrls) {
+		this.encodedUrls = encodedUrls;
+	}
+
+	@Override
+	public String toString() {
+		return "Images [id=" + id + ", name=" + name + ", urls=" + urls + ", encodedUrls=" + encodedUrls + "]";
+	}
+
+	
 }

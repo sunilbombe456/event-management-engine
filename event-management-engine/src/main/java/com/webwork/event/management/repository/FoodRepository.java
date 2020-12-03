@@ -6,4 +6,6 @@ import com.webwork.event.management.entity.Food;
 
 public interface FoodRepository extends MongoRepository<Food, String> {
 
+	Object findByName(String name);
+
 }

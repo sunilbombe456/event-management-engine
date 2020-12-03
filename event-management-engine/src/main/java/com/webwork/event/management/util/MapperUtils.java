@@ -1,17 +1,15 @@
-package com.webwork.event.management.controller;
+package com.webwork.event.management.util;
 
 import org.apache.tomcat.util.json.ParseException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.webwork.event.management.dto.FoodDTO;
 import com.webwork.event.management.dto.VenueDTO;
 import com.webwork.event.management.entity.Food;
 import com.webwork.event.management.entity.Venue;
 
-@RestController
-public class BaseController {
+public class MapperUtils {
 	
 	@Autowired
 	private ModelMapper modelMapper;

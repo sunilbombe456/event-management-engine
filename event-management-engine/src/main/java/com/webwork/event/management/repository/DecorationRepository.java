@@ -6,4 +6,6 @@ import com.webwork.event.management.entity.Decoration;
 
 public interface DecorationRepository extends MongoRepository<Decoration, String> {
 
+	Object findByName(String name);
+
 }

@@ -1,13 +1,17 @@
 package com.webwork.event.management.entity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.webwork.event.management.dto.Address;
+import com.webwork.event.management.enums.EventType;
 
 @Document
 public class Venue {
@@ -23,14 +27,17 @@ public class Venue {
 
 	private int rId;
 
-	private String eventType;
+	@Enumerated(EnumType.STRING)
+	private List<EventType> eventType =  new ArrayList<>();
 
 	private int peopleCapacity;
 
 	public Venue() {
 	}
 
-	public Venue(String name, Address address, List<Images> imagesFile, int rId, String eventType, int peopleCapacity) {
+	public Venue(String id, String name, Address address, List<Images> imagesFile, int rId, List<EventType> eventType,
+			int peopleCapacity) {
+		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.imagesFile = imagesFile;
@@ -79,11 +86,11 @@ public class Venue {
 		this.rId = rId;
 	}
 
-	public String getEventType() {
+	public List<EventType> getEventType() {
 		return eventType;
 	}
 
-	public void setEventType(String eventType) {
+	public void setEventType(List<EventType> eventType) {
 		this.eventType = eventType;
 	}
 
@@ -101,6 +108,4 @@ public class Venue {
 				+ rId + ", eventType=" + eventType + ", peopleCapacity=" + peopleCapacity + "]";
 	}
 
-	
-	
 }
