@@ -2,6 +2,8 @@ package com.webwork.event.management.service;
 
 import java.util.List;
 
+import javax.mail.MessagingException;
+
 import com.webwork.event.management.entity.User;
 
 public interface UserService {
@@ -12,7 +14,7 @@ public interface UserService {
 	
 	public User get(int id);
 	
-	public boolean delete(int id);
+	public boolean delete(int id) throws MessagingException;
 	
 
 }

@@ -1,5 +1,6 @@
 package com.webwork.event.management.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.webwork.event.management.entity.Food;
-import com.webwork.event.management.entity.Venue;
 import com.webwork.event.management.exception.DuplicateEntityException;
 import com.webwork.event.management.exception.EntityNotFoundException;
 import com.webwork.event.management.repository.FoodRepository;
@@ -29,6 +29,23 @@ public class FoodServiceImpl implements FoodService {
 			throw new DuplicateEntityException("food Aready Added..");
 		}
 		return foodRepo.save(food);
+	}
+	
+	@Override
+	@Transactional
+	public List<Food> saveAll(List<Food> foodList) {
+		List<Food> result = new ArrayList<>();
+		for(Food food: foodList) {
+			if(null!= food.getId()) {
+				result.add(foodRepo.save(food));
+			}else {
+				if(null!= foodRepo.findByName(food.getName())) {
+					throw new DuplicateEntityException("food Aready Exists..");
+				}
+				result.add(foodRepo.save(food));
+			}
+		}
+		return result;
 	}
 
 	@Override
@@ -63,5 +80,7 @@ public class FoodServiceImpl implements FoodService {
 			return result.get();
 		}
 	}
+
+	
 
 }

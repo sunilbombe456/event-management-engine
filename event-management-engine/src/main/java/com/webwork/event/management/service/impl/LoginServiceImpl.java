@@ -16,8 +16,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.webwork.event.management.dto.AuthRequest;
-import com.webwork.event.management.dto.EmailDTO;
-import com.webwork.event.management.dto.UserDTO;
+import com.webwork.event.management.dto.JwtResponse;
+import com.webwork.event.management.email.AbstractEmailContext;
+import com.webwork.event.management.email.AccountSuccessEmailContext;
 import com.webwork.event.management.email.AccountVerificationEmailContext;
 import com.webwork.event.management.entity.Roles;
 import com.webwork.event.management.entity.User;
@@ -51,7 +52,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Autowired
 	private RolesRepository rolesRepo;
-	
+
 	private boolean sendAccountVerificationMail(AuthRequest authRequest, String token) throws MessagingException {
 		AccountVerificationEmailContext emailContext = new AccountVerificationEmailContext();
 		emailContext.init(authRequest);
@@ -63,7 +64,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	@Transactional
-	public UserDTO login(AuthRequest authRequest) throws Exception {
+	public JwtResponse login(AuthRequest authRequest) throws Exception {
 		// TODO Auto-generated method stub
 
 		Authentication authentication;
@@ -81,25 +82,21 @@ public class LoginServiceImpl implements LoginService {
 		List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
 				.collect(Collectors.toList());
 
-		UserDTO userDto = new UserDTO(userDetails.getId(), jwt, userDetails.getUsername(), userDetails.getEmail(),
-				roles, userDetails.isEnabled());
-
-		return userDto;
+		return new JwtResponse(userDetails.getId(), jwt, userDetails.getFirstName(), userDetails.getLastName(),
+				userDetails.getEmail(), userDetails.isEnabled(), roles);
 	}
 
 	@Override
 	@Transactional
 	public boolean signup(AuthRequest authRequest) throws Exception {
 		// TODO Auto-generated method stub
-		if (userRepo.existsByUserName(authRequest.getUserName())) {
+		if (userRepo.existsByEmail(authRequest.getUserName())) {
 			throw new DuplicateEntityException("username is already Exists..!");
-		} else if (userDetailsRepo.existsByEmail(authRequest.getEmail())) {
-			throw new DuplicateEntityException("Email is already Exists..!");
 		}
-		String jwt = jwtUtil.generateToken(authRequest.getUserName());
+		String jwt = jwtUtil.generateToken(authRequest.getEmail());
 		User user = getUser(authRequest);
 		userRepo.save(user);
-		if (!sendAccountVerificationMail(authRequest,jwt)) {
+		if (!sendAccountVerificationMail(authRequest, jwt)) {
 			throw new Exception("Verification Email Not Sended !");
 		} else {
 			return true;
@@ -107,28 +104,41 @@ public class LoginServiceImpl implements LoginService {
 
 	}
 
+
 	private User getUser(AuthRequest authRequest) {
-		UserDetails userDetails = new UserDetails();
-		userDetails.setFirstName(authRequest.getFirstName());
-		userDetails.setLastName(authRequest.getLastName());
-		userDetails.setEmail(authRequest.getEmail());
+		User user = new User();
+		user.setFirstName(authRequest.getFirstName());
+		user.setLastName(authRequest.getLastName());
+		user.setEmail(authRequest.getEmail());
+		user.setUserPwd(authRequest.getPassword());
+		user.setActive(false);
+		user.setUserDetails(new UserDetails());
 		Set<Roles> role = new HashSet<>();
 		Roles roles = rolesRepo.findByName("ROLE_CUSTOMER");
 		role.add(roles);
-		User user = new User(authRequest.getUserName(), authRequest.getPassword(), false, userDetails);
 		user.setRoles(role);
 		return user;
 	}
 
 	@Override
-	public boolean verifyEmail(String token) {
+	public boolean verifyEmail(String token) throws Exception {
 		String userName = jwtUtil.extractUsername(token);
 		if (null == userName) {
 			throw new UserNotFoundException("Verification Link Time out Resend Verification Link !");
 		}
-		User user = userRepo.findByUserName(userName);
+		User user = userRepo.findByEmail(userName);
 		user.setActive(true);
 		userRepo.save(user);
+		if (!sendAccountActivationMail(user)) {
+			throw new Exception("Verification Email Not Sended !");
+		}
+		return true;
+	}
+
+	private boolean sendAccountActivationMail(User user) throws MessagingException {
+		AbstractEmailContext emailContext = new AccountSuccessEmailContext();
+		emailContext.init(user);
+		emailService.sendMail(emailContext);
 		return true;
 	}
 

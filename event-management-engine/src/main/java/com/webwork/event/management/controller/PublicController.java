@@ -13,11 +13,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webwork.event.management.converter.Converter;
 import com.webwork.event.management.converter.VenueConverter;
+import com.webwork.event.management.dto.SearchDTO;
 import com.webwork.event.management.dto.VenueDTO;
 import com.webwork.event.management.entity.Decoration;
 import com.webwork.event.management.entity.Food;
@@ -142,6 +145,12 @@ public class PublicController {
 	@GetMapping("/load/all")
 	public List<Images> loadFile() {
 		return imageRepo.findAll();
+	}
+	
+	@PostMapping("/venue/search")
+	public ResponseEntity<?> searchVenue(@RequestBody SearchDTO searchDto){
+		List<Venue> venueList = venueService.searchVenue(searchDto);
+		return new ResponseEntity<>(venueList, HttpStatus.OK);
 	}
 
 }

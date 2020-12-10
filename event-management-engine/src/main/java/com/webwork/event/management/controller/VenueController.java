@@ -1,5 +1,7 @@
 package com.webwork.event.management.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,10 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,19 +33,19 @@ public class VenueController {
 	private Converter convert = new VenueConverter();
 
 	@PostMapping("/add")
-	public ResponseEntity<?> addVenue(@Valid @RequestBody VenueDTO venueDto){
-		Venue venue = (Venue) convert.convertFromDto(venueDto);
-		 venue = venueService.save(venue);
-		 venueDto =(VenueDTO) convert.convertFromEntity(venue);
-		return new ResponseEntity<>(venueDto, HttpStatus.OK);
-	}
-
-	@PutMapping("/add")
-	public ResponseEntity<?> updateVenue(@Valid @RequestBody VenueDTO venueDto) {
+	public ResponseEntity<?> addVenue(@Valid @RequestBody VenueDTO venueDto) {
 		Venue venue = (Venue) convert.convertFromDto(venueDto);
 		venue = venueService.save(venue);
 		venueDto = (VenueDTO) convert.convertFromEntity(venue);
 		return new ResponseEntity<>(venueDto, HttpStatus.OK);
+	}
+
+	@PostMapping("/add/all")
+	public ResponseEntity<?> updateAllVenue(@Valid @RequestBody List<VenueDTO> venueDtoList) {
+		List<Venue> venueList = convert.createfromDtos(venueDtoList);
+		venueList = venueService.saveAll(venueList);
+		venueDtoList = convert.createFromEntities(venueList);
+		return new ResponseEntity<>(venueDtoList, HttpStatus.OK);
 	}
 
 	@DeleteMapping("/delete/{venueId}")
@@ -57,5 +57,4 @@ public class VenueController {
 		return new ResponseEntity<>(message, HttpStatus.OK);
 	}
 
-	
 }

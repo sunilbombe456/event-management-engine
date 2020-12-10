@@ -1,5 +1,6 @@
 package com.webwork.event.management.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.webwork.event.management.dto.SearchDTO;
 import com.webwork.event.management.entity.Venue;
 import com.webwork.event.management.exception.DuplicateEntityException;
 import com.webwork.event.management.exception.EntityNotFoundException;
@@ -30,6 +32,23 @@ public class VenueServiceImpl implements VenueService {
 		}
 		return venueRepo.save(venue);
 
+	}
+
+	@Override
+	@Transactional
+	public List<Venue> saveAll(List<Venue> venueList) {
+		List<Venue> result = new ArrayList<>();
+		for(Venue venue : venueList) {
+			if(null!=venue.getId()) {
+				result.add(venueRepo.save(venue));
+			}else {
+				if(null!=venueRepo.findByName(venue.getName())) {
+					throw new DuplicateEntityException("Already Exists");
+				}
+				result.add(venue);
+			}
+		}
+		return result;
 	}
 
 	@Override
@@ -66,6 +85,12 @@ public class VenueServiceImpl implements VenueService {
 		} else {
 			return result.get();
 		}
+	}
+
+	@Override
+	public List<Venue> searchVenue(SearchDTO searchDto) {
+		List<Venue> venueList = venueRepo.findByPeopleCapacity(searchDto.getPeopleCount());
+		return null;
 	}
 
 }

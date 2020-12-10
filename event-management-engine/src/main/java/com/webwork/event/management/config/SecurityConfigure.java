@@ -69,7 +69,7 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter {
 		.permitAll()
 		.antMatchers("/private/event/1/0/**").hasRole("ADMIN")
 		.antMatchers("/private/event/1/0/employee/**").hasRole("EMPLOYEE")
-		.antMatchers("/private/event/1/0/**").hasRole("CUSTOMER")
+		.antMatchers("/private/event/1/0/customer/**").hasRole("CUSTOMER")
 		.anyRequest().authenticated()
 		.and().exceptionHandling()
 		.accessDeniedPage("/public/event/1/0/access-denied")

@@ -1,5 +1,7 @@
 package com.webwork.event.management.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +29,7 @@ public class FoodController {
 	@Autowired
 	private FoodService foodService;
 
-	private Converter convert;
+	private Converter<FoodDTO, Food> convert;
 
 	@PostMapping("/add")
 	public ResponseEntity<?> addFood(@Valid @RequestBody FoodDTO foodDto) {
@@ -36,13 +38,21 @@ public class FoodController {
 		foodDto = (FoodDTO) convert.convertFromEntity(food);
 		return new ResponseEntity<>(foodDto, HttpStatus.OK);
 	}
-	
+
+	@PostMapping("/add/all")
+	public ResponseEntity<?> addAllFood(@Valid @RequestBody List<FoodDTO> foodDtoList) {
+		List<Food> foodList = convert.createfromDtos(foodDtoList);
+		foodList = foodService.saveAll(foodList);
+		foodDtoList = convert.createFromEntities(foodList);
+		return new ResponseEntity<>(foodDtoList, HttpStatus.OK);
+	}
+
 	@DeleteMapping("/delete/{foodId}")
-	public ResponseEntity<?> deleteFood(@PathVariable String foodId){
+	public ResponseEntity<?> deleteFood(@PathVariable String foodId) {
 		ResponseMessage message = null;
-		if(!foodService.delete(foodId)) {
+		if (!foodService.delete(foodId)) {
 			message = new ResponseMessage("Not Deleted..!");
-		}else {
+		} else {
 			message = new ResponseMessage("Deleted Successfull..!");
 		}
 		return new ResponseEntity<>(message, HttpStatus.OK);

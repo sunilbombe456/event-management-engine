@@ -14,6 +14,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Table(name = "role")
 public class Roles {
@@ -26,7 +28,8 @@ public class Roles {
 	@Column(name = "name")
 	private String name;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
+	@JsonBackReference
+	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"))
 	private Set<User> users = new HashSet<>();
 
