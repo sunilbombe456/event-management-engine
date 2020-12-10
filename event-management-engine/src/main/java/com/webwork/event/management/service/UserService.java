@@ -1,12 +1,20 @@
 package com.webwork.event.management.service;
 
-import com.webwork.event.management.dto.AuthRequest;
+import java.util.List;
+
+import javax.mail.MessagingException;
+
 import com.webwork.event.management.entity.User;
 
 public interface UserService {
 
-	void save(User user);
+	public User save(User user);
 
-	User signUp(AuthRequest authRequest);
+	public List<User> getAll();
+	
+	public User get(int id);
+	
+	public boolean delete(int id) throws MessagingException;
+	
 
 }

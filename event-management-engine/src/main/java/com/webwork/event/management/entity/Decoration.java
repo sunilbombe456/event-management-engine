@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.webwork.event.management.dto.EventType;
+import com.webwork.event.management.enums.EventType;
 
 @Document
 public class Decoration {
@@ -25,16 +25,29 @@ public class Decoration {
 	
 	private List<EventType> eventType = new ArrayList<>();
 	
-	private List<Images> imagesFile = new ArrayList<>();
+	private List<String> imagesFile = new ArrayList<>();
 	
 	private int rId;
 
 	public Decoration() {
-		super();
 	}
 
 	public Decoration(String name, String description, String decorationSize, int price, List<EventType> eventType,
-			List<Images> imagesFile, int rId) {
+			List<String> imagesFile, int rId) {
+		this.name = name;
+		this.description = description;
+		this.decorationSize = decorationSize;
+		this.price = price;
+		this.eventType = eventType;
+		this.imagesFile = imagesFile;
+		this.rId = rId;
+	}
+	
+	
+
+	public Decoration(String id, String name, String description, String decorationSize, int price,
+			List<EventType> eventType, List<String> imagesFile, int rId) {
+		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.decorationSize = decorationSize;
@@ -92,11 +105,11 @@ public class Decoration {
 		this.eventType = eventType;
 	}
 
-	public List<Images> getImagesFile() {
+	public List<String> getImagesFile() {
 		return imagesFile;
 	}
 
-	public void setImagesFile(List<Images> imagesFile) {
+	public void setImagesFile(List<String> imagesFile) {
 		this.imagesFile = imagesFile;
 	}
 

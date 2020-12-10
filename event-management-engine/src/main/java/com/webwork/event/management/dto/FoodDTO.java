@@ -3,10 +3,14 @@ package com.webwork.event.management.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Id;
+
 import com.webwork.event.management.entity.Images;
+import com.webwork.event.management.enums.FoodType;
 
 public class FoodDTO {
 
+	@Id
 	private String id;
 
 	private String name;
@@ -15,7 +19,7 @@ public class FoodDTO {
 
 	private List<FoodType> foodType = new ArrayList<>();
 
-	private List<Images> imagesFile = new ArrayList<>();
+	private List<String> imagesFile = new ArrayList<>();
 
 	private int rId;
 
@@ -23,8 +27,8 @@ public class FoodDTO {
 		super();
 	}
 
-	public FoodDTO(String name, float price, List<FoodType> foodType, List<Images> imagesFile, int rId) {
-		super();
+	public FoodDTO(String id, String name, float price, List<FoodType> foodType, List<String> imagesFile, int rId) {
+		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.foodType = foodType;
@@ -64,11 +68,11 @@ public class FoodDTO {
 		this.foodType = foodType;
 	}
 
-	public List<Images> getImagesFile() {
+	public List<String> getImagesFile() {
 		return imagesFile;
 	}
 
-	public void setImagesFile(List<Images> imagesFile) {
+	public void setImagesFile(List<String> imagesFile) {
 		this.imagesFile = imagesFile;
 	}
 

@@ -26,11 +26,22 @@ public class CustomUserDetailService implements UserDetailsService {
 //				new ArrayList<>());
 //	}
 
+//	@Override
+//	public UserDetailServiceImpl loadUserByUsername(String username) throws UsernameNotFoundException {
+//		// TODO Auto-generated method stub
+//
+//		User user = userRepo.findByUserName(username);
+//		if (user == null) {
+//			throw new UsernameNotFoundException("User NoT found..!");
+//		}
+//		return new UserDetailServiceImpl(user);
+//	}
+	
 	@Override
-	public UserDetailServiceImpl loadUserByUsername(String username) throws UsernameNotFoundException {
+	public UserDetailServiceImpl loadUserByUsername(String email) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 
-		User user = userRepo.findByUserName(username);
+		User user = userRepo.findByEmail(email);
 		if (user == null) {
 			throw new UsernameNotFoundException("User NoT found..!");
 		}

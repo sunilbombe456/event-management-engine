@@ -2,36 +2,41 @@ package com.webwork.event.management.dto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
+import javax.persistence.Id;
+
+import com.webwork.event.management.entity.Roles;
 
 public class JwtResponse {
 
+	@Id
+	private int id;
+	
 	private String token;
 
-	private int id;
-
-	private String userName;
+	private String firstName;
+	
+	private String lastName;
 
 	private String email;
+	
+	private boolean active;
 
 	private List<String> roles = new ArrayList<>();
 
 	public JwtResponse() {
 	}
 
-	public JwtResponse(String token, int id, String userName, String email, List<String> roles) {
-		this.token = token;
+	public JwtResponse(int id, String token, String firstName, String lastName, String email, boolean active,
+			List<String> roles) {
 		this.id = id;
-		this.userName = userName;
-		this.email = email;
-		this.roles = roles;
-	}
-
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
 		this.token = token;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.active = active;
+		this.roles = roles;
 	}
 
 	public int getId() {
@@ -42,12 +47,28 @@ public class JwtResponse {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getToken() {
+		return token;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setToken(String token) {
+		this.token = token;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -56,6 +77,14 @@ public class JwtResponse {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public List<String> getRoles() {
@@ -68,8 +97,10 @@ public class JwtResponse {
 
 	@Override
 	public String toString() {
-		return "JwtResponse [token=" + token + ", id=" + id + ", userName=" + userName + ", email=" + email + ", roles="
-				+ roles + "]";
+		return "JwtResponse [id=" + id + ", token=" + token + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", email=" + email + ", active=" + active + ", roles=" + roles + "]";
 	}
 
+
+	
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+ <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <title>Account Confirm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body> 
+    <div class="container well">
+        <div class="row">
+            <div class="page-header">
+                <h3 class="text-center">Welcome to TheOriginalApproch.com</h3>
+            </div>
+            <div class="container">
+
+                <p>Hey <b><p th:text="${firstName}">,</b> </p>
+                <p>I’m Sunil Bombe, the founder of [company name] and I’d like to personally thank you for signing up to our service.<br>
+                Your Account is Activated Now you can login into your Account<br>
+                We established <b>TheOriginalApproach</b> in order to plan Events.<br>
+                I’d love to hear what you think of Events and if there is anything we can improve. If you have any questions, please reply to this email. I’m always happy to help!
+                <p th:text="${firstName}"><br>
+               </p>
+
+                
+            </div>
+            <div class="container">
+                  <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+                <tr>
+                    <td valign="middle" class="bg_light footer email-section">
+                        <table>
+                            <tr>
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-right: 10px;">
+                                                <h3 class="heading">About</h3>
+                                                <p>Welcome to TheOriginalApproach.com  We are planing Events 
+                                                    By User Requirements
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
+                                                <h3 class="heading">Contact Info</h3>
+                                                <ul>
+                                                    <li><span class="text">theoriginalapproach@gmail.com</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-left: 10px;">
+                                                <h3 class="heading">Useful Links</h3>
+                                                <ul>
+                                                    <li><a href="#">Instagram</a></li>
+                                                    <li><a href="#">Portfolio</a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr><!-- end: tr -->
+            </table>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

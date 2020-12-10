@@ -6,8 +6,9 @@ import com.webwork.event.management.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
-	User findByUserName(String username);
 
-	boolean existsByUserName(String userName);
+	User findByEmail(String email);
+
+	boolean existsByEmail(String userName);
 
 }

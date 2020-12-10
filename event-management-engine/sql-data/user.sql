@@ -4,7 +4,10 @@ DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(45) DEFAULT NULL,
+  `first_name` varchar(80) DEFAULT NULL,
+  `middle_name` varchar(80) DEFAULT NULL,
+  `last_name` varchar(80) DEFAULT NULL,
+  `user_email` varchar(100) DEFAULT NULL,
   `user_pwd` varchar(45) DEFAULT NULL,
   `enabled` tinyint(1) NOT NULL,
   `user_detail_id` int(11) DEFAULT NULL,

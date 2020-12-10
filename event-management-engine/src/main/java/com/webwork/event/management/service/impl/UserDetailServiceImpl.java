@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,6 +14,10 @@ import com.webwork.event.management.entity.User;
 
 public class UserDetailServiceImpl implements UserDetails {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private User user;
 	
 	public UserDetailServiceImpl(User user) {
@@ -43,7 +46,7 @@ public class UserDetailServiceImpl implements UserDetails {
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return user.getUserName();
+		return user.getEmail();
 	}
 
 	@Override
@@ -72,11 +75,19 @@ public class UserDetailServiceImpl implements UserDetails {
 	
 	// new Added
 	public String getEmail() {
-		return user.getUserDetails().getEmail();
+		return user.getEmail();
 	}
 	
 	public int getId() {
 		return user.getId();
+	}
+	
+	public String getFirstName() {
+		return user.getFirstName();
+	}
+	
+	public String getLastName() {
+		return user.getLastName();
 	}
 
 }
