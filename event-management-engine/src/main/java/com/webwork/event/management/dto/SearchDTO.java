@@ -3,6 +3,7 @@ package com.webwork.event.management.dto;
 import java.util.Date;
 
 import com.webwork.event.management.enums.EventType;
+import com.webwork.event.management.enums.LocationType;
 
 public class SearchDTO {
 	
@@ -11,14 +12,18 @@ public class SearchDTO {
 	private Date date;
 	
 	private int peopleCount;
+	
+	private LocationType location;
 
 	public SearchDTO() {
 	}
 
-	public SearchDTO(EventType eventType, Date date, int peopleCount) {
+	public SearchDTO(EventType eventType, Date date, int peopleCount, LocationType location) {
+		super();
 		this.eventType = eventType;
 		this.date = date;
 		this.peopleCount = peopleCount;
+		this.location = location;
 	}
 
 	public EventType getEventType() {
@@ -45,9 +50,19 @@ public class SearchDTO {
 		this.peopleCount = peopleCount;
 	}
 
+	public LocationType getLocation() {
+		return location;
+	}
+
+	public void setLocation(LocationType location) {
+		this.location = location;
+	}
+
 	@Override
 	public String toString() {
-		return "SearchDTO [eventType=" + eventType + ", date=" + date + ", peopleCount=" + peopleCount + "]";
+		return "SearchDTO [eventType=" + eventType + ", date=" + date + ", peopleCount=" + peopleCount + ", location="
+				+ location + "]";
 	}
+
 	
 }

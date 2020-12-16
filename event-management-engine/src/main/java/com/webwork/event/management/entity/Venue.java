@@ -24,7 +24,7 @@ public class Venue {
 	private Address address;
 
 	private List<String> imagesFile = new ArrayList<>();
-	
+
 	private int rId;
 
 	@Enumerated(EnumType.STRING)
@@ -34,15 +34,13 @@ public class Venue {
 
 	private float rent;
 
-	private List<Booking> booking;
-	
+	private List<String> bookingId;
+
 	public Venue() {
 	}
 
-
-
 	public Venue(String id, String name, Address address, List<String> imagesFile, int rId, List<EventType> eventType,
-			int peopleCapacity, float rent, List<Booking> booking) {
+			int peopleCapacity, float rent, List<String> bookingId) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
@@ -51,10 +49,8 @@ public class Venue {
 		this.eventType = eventType;
 		this.peopleCapacity = peopleCapacity;
 		this.rent = rent;
-		this.booking = booking;
+		this.bookingId = bookingId;
 	}
-
-
 
 	public String getId() {
 		return id;
@@ -120,36 +116,26 @@ public class Venue {
 		this.rent = rent;
 	}
 
-
-
-	public void addBooking(Booking booking) {
-		if(this.booking==null) {
-			this.booking = new ArrayList<>();
-		}
-		this.booking.add(booking);
-		
+	public List<String> getBookingId() {
+		return bookingId;
 	}
 
-
-
-	public List<Booking> getBooking() {
-		return booking;
+	public void setBookingId(List<String> bookingId) {
+		this.bookingId = bookingId;
 	}
-
-
-
-	public void setBooking(List<Booking> booking) {
-		this.booking = booking;
-	}
-
-
 
 	@Override
 	public String toString() {
 		return "Venue [id=" + id + ", name=" + name + ", address=" + address + ", imagesFile=" + imagesFile + ", rId="
 				+ rId + ", eventType=" + eventType + ", peopleCapacity=" + peopleCapacity + ", rent=" + rent
-				+ ", booking=" + booking + "]";
+				+ ", bookingId=" + bookingId + "]";
 	}
-	
-	
+
+	public void addBooking(String id) {
+		if (this.bookingId == null) {
+			this.bookingId = new ArrayList<>();
+		}
+		this.bookingId.add(id);
+	}
+
 }

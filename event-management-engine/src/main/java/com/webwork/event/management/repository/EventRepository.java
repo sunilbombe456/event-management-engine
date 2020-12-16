@@ -8,4 +8,5 @@ public interface EventRepository extends JpaRepository<Event, Integer> {
 
 	Event save(Event event);
 
+
 }
