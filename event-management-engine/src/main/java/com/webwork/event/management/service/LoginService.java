@@ -1,14 +1,14 @@
 package com.webwork.event.management.service;
 
 import com.webwork.event.management.dto.AuthRequest;
-import com.webwork.event.management.dto.UserDTO;
+import com.webwork.event.management.dto.JwtResponse;
 
 public interface LoginService {
 	
-	public UserDTO login(AuthRequest authRequest) throws Exception;
+	public JwtResponse login(AuthRequest authRequest) throws Exception;
 	
 	public boolean signup(AuthRequest authRequest) throws Exception;
 
-	public boolean verifyEmail(String token);
+	public boolean verifyEmail(String token) throws Exception;
 
 }

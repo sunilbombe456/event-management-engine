@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.ParseException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +14,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webwork.event.management.converter.Converter;
 import com.webwork.event.management.converter.VenueConverter;
+import com.webwork.event.management.dto.SearchDTO;
 import com.webwork.event.management.dto.VenueDTO;
 import com.webwork.event.management.entity.Decoration;
 import com.webwork.event.management.entity.Food;
@@ -25,9 +29,11 @@ import com.webwork.event.management.entity.Images;
 import com.webwork.event.management.entity.Venue;
 import com.webwork.event.management.enums.EventType;
 import com.webwork.event.management.enums.FoodType;
+import com.webwork.event.management.enums.LocationType;
 import com.webwork.event.management.repository.ImagesRepository;
 import com.webwork.event.management.service.DecorationService;
 import com.webwork.event.management.service.FileService;
+import com.webwork.event.management.service.FilterService;
 import com.webwork.event.management.service.FoodService;
 import com.webwork.event.management.service.VenueService;
 
@@ -47,6 +53,10 @@ public class PublicController {
 
 	@Autowired
 	private FoodService foodService;
+	
+	
+	@Autowired
+	private FilterService filterService;
 
 	@Autowired
 	private DecorationService decorationService;
@@ -76,6 +86,19 @@ public class PublicController {
 		EventType[] eventType = EventType.values();
 		try {
 			response = new ResponseEntity<>(eventType, HttpStatus.OK);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return response;
+	}
+	
+	
+	@GetMapping("/location/type")
+	public ResponseEntity<?> getLocationType() {
+		ResponseEntity<?> response = null;
+		LocationType[] locationType = LocationType.values();
+		try {
+			response = new ResponseEntity<>(locationType, HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -142,6 +165,13 @@ public class PublicController {
 	@GetMapping("/load/all")
 	public List<Images> loadFile() {
 		return imageRepo.findAll();
+	}
+	
+	@PostMapping("/filter/venue")
+	public ResponseEntity<?> searchVenue(@RequestBody SearchDTO searchDto) throws ParseException{
+		List<Venue> venueList = null;
+		venueList = filterService.getFilteredVenue(searchDto);
+		return new ResponseEntity<>(venueList, HttpStatus.OK);
 	}
 
 }

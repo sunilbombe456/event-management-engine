@@ -14,4 +14,6 @@ public interface FoodService {
 
 	public Food get(String id);
 
+	public List<Food> saveAll(List<Food> foodList);
+
 }

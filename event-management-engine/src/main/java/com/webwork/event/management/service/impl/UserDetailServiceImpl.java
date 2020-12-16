@@ -46,7 +46,7 @@ public class UserDetailServiceImpl implements UserDetails {
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return user.getUserName();
+		return user.getEmail();
 	}
 
 	@Override
@@ -75,11 +75,19 @@ public class UserDetailServiceImpl implements UserDetails {
 	
 	// new Added
 	public String getEmail() {
-		return user.getUserDetails().getEmail();
+		return user.getEmail();
 	}
 	
 	public int getId() {
 		return user.getId();
+	}
+	
+	public String getFirstName() {
+		return user.getFirstName();
+	}
+	
+	public String getLastName() {
+		return user.getLastName();
 	}
 
 }

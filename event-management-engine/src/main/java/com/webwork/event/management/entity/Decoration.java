@@ -25,7 +25,7 @@ public class Decoration {
 	
 	private List<EventType> eventType = new ArrayList<>();
 	
-	private List<Images> imagesFile = new ArrayList<>();
+	private List<String> imagesFile = new ArrayList<>();
 	
 	private int rId;
 
@@ -33,7 +33,7 @@ public class Decoration {
 	}
 
 	public Decoration(String name, String description, String decorationSize, int price, List<EventType> eventType,
-			List<Images> imagesFile, int rId) {
+			List<String> imagesFile, int rId) {
 		this.name = name;
 		this.description = description;
 		this.decorationSize = decorationSize;
@@ -46,7 +46,7 @@ public class Decoration {
 	
 
 	public Decoration(String id, String name, String description, String decorationSize, int price,
-			List<EventType> eventType, List<Images> imagesFile, int rId) {
+			List<EventType> eventType, List<String> imagesFile, int rId) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
@@ -105,11 +105,11 @@ public class Decoration {
 		this.eventType = eventType;
 	}
 
-	public List<Images> getImagesFile() {
+	public List<String> getImagesFile() {
 		return imagesFile;
 	}
 
-	public void setImagesFile(List<Images> imagesFile) {
+	public void setImagesFile(List<String> imagesFile) {
 		this.imagesFile = imagesFile;
 	}
 

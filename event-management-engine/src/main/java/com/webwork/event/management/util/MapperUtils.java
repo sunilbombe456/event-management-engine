@@ -1,5 +1,7 @@
 package com.webwork.event.management.util;
 
+import java.util.List;
+
 import org.apache.tomcat.util.json.ParseException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,10 @@ public class MapperUtils {
 	
 	protected Venue convertToEntity(VenueDTO venueDTO) throws ParseException {
 		Venue venue = modelMapper.map(venueDTO, Venue.class);
+		return venue;
+	}
+	protected List<Venue> createFromEntity(List<VenueDTO> venueDTO) throws ParseException {
+		List<Venue> venue = (List<Venue>) modelMapper.map(venueDTO, Venue.class);
 		return venue;
 	}
 	

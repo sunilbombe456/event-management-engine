@@ -21,7 +21,7 @@ public class Food {
 
 	private List<FoodType> foodType = new ArrayList<>();
 
-	private List<Images> imagesFile = new ArrayList<>();
+	private List<String> imagesFile = new ArrayList<>();
 
 	private int rId;
 
@@ -30,7 +30,7 @@ public class Food {
 	}
 
 
-	public Food(String id, String name, float price, List<FoodType> foodType, List<Images> imagesFile, int rId) {
+	public Food(String id, String name, float price, List<FoodType> foodType, List<String> imagesFile, int rId) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -81,12 +81,12 @@ public class Food {
 	}
 
 
-	public List<Images> getImagesFile() {
+	public List<String> getImagesFile() {
 		return imagesFile;
 	}
 
 
-	public void setImagesFile(List<Images> imagesFile) {
+	public void setImagesFile(List<String> imagesFile) {
 		this.imagesFile = imagesFile;
 	}
 

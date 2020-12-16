@@ -6,6 +6,5 @@ import com.webwork.event.management.entity.UserDetails;
 
 public interface UserDetailsRepository extends JpaRepository<UserDetails, Integer> {
 
-	boolean existsByEmail(String email);
 
 }
