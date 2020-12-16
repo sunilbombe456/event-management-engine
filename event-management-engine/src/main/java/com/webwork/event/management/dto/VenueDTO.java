@@ -1,7 +1,6 @@
 package com.webwork.event.management.dto;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EnumType;
@@ -11,8 +10,6 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import com.webwork.event.management.entity.Booking;
-import com.webwork.event.management.entity.Images;
 import com.webwork.event.management.enums.EventType;
 
 public class VenueDTO {
@@ -40,16 +37,15 @@ public class VenueDTO {
 
 	private float rent;
 	
-	private List<Booking> booking;
+	private List<String> bookingId;
 
 	public VenueDTO() {
 	}
 
-
 	public VenueDTO(String id, @NotBlank(message = "Name Should not be Empty") String name,
 			@NotNull(message = "Address Should not be Empty") Address address,
 			@NotNull(message = "Images Should not be Empty.") List<String> imagesFile, int rId,
-			List<EventType> eventType, @Min(100) int peopleCapacity, float rent, List<Booking> booking) {
+			List<EventType> eventType, @Min(100) int peopleCapacity, float rent, List<String> bookingId) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
@@ -58,14 +54,8 @@ public class VenueDTO {
 		this.eventType = eventType;
 		this.peopleCapacity = peopleCapacity;
 		this.rent = rent;
-		this.booking = booking;
+		this.bookingId = bookingId;
 	}
-
-
-
-
-
-
 
 	public String getId() {
 		return id;
@@ -91,11 +81,11 @@ public class VenueDTO {
 		this.address = address;
 	}
 
-	public @NotNull(message = "Images Should not be Empty.") List<String> getImagesFile() {
+	public List<String> getImagesFile() {
 		return imagesFile;
 	}
 
-	public void setImagesFile(@NotNull(message = "Images Should not be Empty.") List<String> imagesFile) {
+	public void setImagesFile(List<String> imagesFile) {
 		this.imagesFile = imagesFile;
 	}
 
@@ -131,31 +121,23 @@ public class VenueDTO {
 		this.rent = rent;
 	}
 
-
-	public List<Booking> getBooking() {
-		return booking;
+	public List<String> getBookingId() {
+		return bookingId;
 	}
 
-
-	public void setBooking(List<Booking> booking) {
-		this.booking = booking;
+	public void setBookingId(List<String> bookingId) {
+		this.bookingId = bookingId;
 	}
-
 
 	@Override
 	public String toString() {
 		return "VenueDTO [id=" + id + ", name=" + name + ", address=" + address + ", imagesFile=" + imagesFile
 				+ ", rId=" + rId + ", eventType=" + eventType + ", peopleCapacity=" + peopleCapacity + ", rent=" + rent
-				+ ", booking=" + booking + "]";
+				+ ", bookingId=" + bookingId + "]";
 	}
 	
-	public void addBooking(Booking booking) {
-		if(this.booking==null) {
-			this.booking = new ArrayList<>();
-		}
-		this.booking.add(booking);	
-	}
 	
+
 
 
 }

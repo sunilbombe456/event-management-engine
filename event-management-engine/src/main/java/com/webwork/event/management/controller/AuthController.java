@@ -52,7 +52,16 @@ public class AuthController {
 	}
 
 	@GetMapping("/access-denied")
-	public ResponseEntity<ResponseError> accessDenied() {
+	public ResponseEntity<ResponseError> getAccessDenied() {
+		ResponseError error = new ResponseError();
+		error.setStatus(HttpStatus.NOT_ACCEPTABLE.value());
+		error.setMessage("You Are Not Allowed to Access that Credential..!");
+		error.setTimeStamp(System.currentTimeMillis());
+		return new ResponseEntity<>(error, HttpStatus.NOT_ACCEPTABLE);
+	}
+	
+	@PostMapping("/access-denied")
+	public ResponseEntity<ResponseError> postAccessDenied() {
 		ResponseError error = new ResponseError();
 		error.setStatus(HttpStatus.NOT_ACCEPTABLE.value());
 		error.setMessage("You Are Not Allowed to Access that Credential..!");
