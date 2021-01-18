@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.webwork.event.management.dto.SearchDTO;
+import com.webwork.event.management.dto.VenueBookingDTO;
 import com.webwork.event.management.entity.Venue;
 import com.webwork.event.management.entity.VenueBooking;
 import com.webwork.event.management.exception.DuplicateEntityException;

@@ -1,13 +1,8 @@
-package com.webwork.event.management.entity;
-
-import java.util.Date;
+package com.webwork.event.management.dto;
 
 import javax.persistence.Id;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document
-public class VenueBooking {
+public class VenueBookingDTO {
 
 	@Id
 	private String id;
@@ -18,12 +13,12 @@ public class VenueBooking {
 	
 	private int userId;
 	
-	private Date date;
+	private String date;
 
-	public VenueBooking() {
+	public VenueBookingDTO() {
 	}
 
-	public VenueBooking(String id, String venueId, String venueName, int userId, Date date) {
+	public VenueBookingDTO(String id, String venueId, String venueName, int userId, String date) {
 		this.id = id;
 		this.venueId = venueId;
 		this.venueName = venueName;
@@ -63,23 +58,19 @@ public class VenueBooking {
 		this.userId = userId;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
 	@Override
 	public String toString() {
-		return "VenueBooking [id=" + id + ", venueId=" + venueId + ", venueName=" + venueName + ", userId=" + userId
+		return "VenueBookingDTO [id=" + id + ", venueId=" + venueId + ", venueName=" + venueName + ", userId=" + userId
 				+ ", date=" + date + "]";
 	}
 
 	
-	
-	
-	
-
 }

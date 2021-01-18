@@ -19,6 +19,7 @@ import com.webwork.event.management.repository.DecorationRepository;
 import com.webwork.event.management.repository.VenueBookingRepository;
 import com.webwork.event.management.repository.VenueRepository;
 import com.webwork.event.management.service.FilterService;
+import com.webwork.event.management.util.DateUtils;
 
 @Service
 public class FilterServiceImpl implements FilterService {
@@ -34,20 +35,19 @@ public class FilterServiceImpl implements FilterService {
 
 	@Override
 	public List<Venue> getFilteredVenue(SearchDTO searchDto) throws ParseException {
-
 		List<Venue> venueList = venueRepo.findAll();
 		if (null != venueList || !venueList.isEmpty()) {
 			venueList = getFilterByEventType(venueList, searchDto.getEventType());
-
 			venueList = getFilterByLocation(venueList, searchDto.getLocation());
-
-			venueList = getFilterByDate(venueList, searchDto.getDate());
+			venueList = getFilterByDate(venueList, DateUtils.parseDate(searchDto.getDate()));
+			venueList = getFilterByPeopleCapacity(venueList, searchDto.getPeopleCount());
 		}
 		return venueList;
 	}
 
 	@Override
 	public List<Decoration> getFilteredDecoration(SearchDTO searchDto) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -55,10 +55,8 @@ public class FilterServiceImpl implements FilterService {
 		if (theDate == null) {
 			return venueList;
 		}
-		System.out.println("Given Date" + theDate);
 		List<Venue> dateFilteredList = new ArrayList<Venue>();
 		for (Venue venue : venueList) {
-			System.out.println("\n Venue : " + venue);
 			List<String> bookingIdList = venue.getBookingId();
 			if (null != bookingIdList && !bookingIdList.isEmpty()) {
 				boolean flag = false;
@@ -66,10 +64,7 @@ public class FilterServiceImpl implements FilterService {
 					Optional<VenueBooking> result = venueBookingRepo.findById(bookingId);
 					if (result.isPresent()) {
 						VenueBooking venueBook = (VenueBooking) result.get();
-						System.out.println("\n ==>" + venueBook.getDate());
-						System.out.println("\n booking Id" + bookingId);
 						if (theDate.compareTo(venueBook.getDate()) == 0) {
-							System.out.println("matched Date" + venueBook.getDate());
 							flag = false;
 						} else {
 							flag = true;
@@ -112,6 +107,19 @@ public class FilterServiceImpl implements FilterService {
 			eventTypeFilteredList = venueList;
 		}
 		return eventTypeFilteredList;
+	}
+
+	private List<Venue> getFilterByPeopleCapacity(List<Venue> venueList, int peopleCapacity) {
+		List<Venue> peopleCapacityFilteredList = new ArrayList<Venue>();
+		if (venueList == null) {
+			return venueList;
+		}
+		for (Venue venue : venueList) {
+			if (venue.getPeopleCapacity() <= peopleCapacity) {
+				peopleCapacityFilteredList.add(venue);
+			}
+		}
+		return peopleCapacityFilteredList;
 	}
 
 }

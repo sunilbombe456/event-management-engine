@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.webwork.event.management.converter.Converter;
+import com.webwork.event.management.converter.VenueBookingConverter;
 import com.webwork.event.management.dto.ResponseMessage;
+import com.webwork.event.management.dto.VenueBookingDTO;
 import com.webwork.event.management.entity.VenueBooking;
 import com.webwork.event.management.service.VenueService;
 
@@ -33,7 +36,9 @@ public class CustomerController {
 	}
 	
 	@PostMapping("/book/venue")
-	public ResponseEntity<?> bookVenue(@RequestBody VenueBooking venueBooking){
+	public ResponseEntity<?> bookVenue(@RequestBody VenueBookingDTO venueBookingDto){
+		Converter converter = new VenueBookingConverter();
+		VenueBooking venueBooking = (VenueBooking) converter.convertFromDto(venueBookingDto);
 		ResponseMessage message = null;
 		if(venueService.bookVenue(venueBooking)) {
 			message = new ResponseMessage("Booking Done");

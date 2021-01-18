@@ -1,7 +1,5 @@
 package com.webwork.event.management.dto;
 
-import java.util.Date;
-
 import com.webwork.event.management.enums.EventType;
 import com.webwork.event.management.enums.LocationType;
 
@@ -9,7 +7,7 @@ public class SearchDTO {
 	
 	private EventType eventType;
 	
-	private Date date;
+	private String date;
 	
 	private int peopleCount;
 	
@@ -18,8 +16,7 @@ public class SearchDTO {
 	public SearchDTO() {
 	}
 
-	public SearchDTO(EventType eventType, Date date, int peopleCount, LocationType location) {
-		super();
+	public SearchDTO(EventType eventType, String date, int peopleCount, LocationType location) {
 		this.eventType = eventType;
 		this.date = date;
 		this.peopleCount = peopleCount;
@@ -34,11 +31,11 @@ public class SearchDTO {
 		this.eventType = eventType;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
