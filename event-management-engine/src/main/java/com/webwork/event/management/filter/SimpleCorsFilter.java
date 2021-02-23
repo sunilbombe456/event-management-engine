@@ -55,9 +55,8 @@ public class SimpleCorsFilter implements Filter{
 			res.setStatus(HttpServletResponse.SC_OK);
 		}else {
 			chain.doFilter(request, response);
-		}
-		
+			
+		}		
 	}
 
-	
 }

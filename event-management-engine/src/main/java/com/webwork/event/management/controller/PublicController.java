@@ -23,14 +23,17 @@ import com.webwork.event.management.converter.Converter;
 import com.webwork.event.management.converter.VenueConverter;
 import com.webwork.event.management.dto.SearchDTO;
 import com.webwork.event.management.dto.VenueDTO;
+import com.webwork.event.management.entity.Country;
 import com.webwork.event.management.entity.Decoration;
 import com.webwork.event.management.entity.Food;
 import com.webwork.event.management.entity.Images;
+import com.webwork.event.management.entity.States;
 import com.webwork.event.management.entity.Venue;
 import com.webwork.event.management.enums.EventType;
 import com.webwork.event.management.enums.FoodType;
 import com.webwork.event.management.enums.LocationType;
 import com.webwork.event.management.repository.ImagesRepository;
+import com.webwork.event.management.service.AddressService;
 import com.webwork.event.management.service.DecorationService;
 import com.webwork.event.management.service.FileService;
 import com.webwork.event.management.service.FilterService;
@@ -66,7 +69,8 @@ public class PublicController {
 	@Autowired
 	private ImagesRepository imageRepo;
 
-	
+	@Autowired
+	private AddressService addressService;
 
 	@GetMapping("/food/type")
 	public ResponseEntity<?> getFoodType() {
@@ -173,5 +177,14 @@ public class PublicController {
 		venueList = filterService.getFilteredVenue(searchDto);
 		return new ResponseEntity<>(venueList, HttpStatus.OK);
 	}
-
+	
+	@GetMapping("/country/all")
+	public List<Country> countryAll(){
+		return addressService.findAll();
+	}
+	
+	@GetMapping("/states/{countryId}")
+	public List<States> statesByCountryIdAll(@PathVariable int countryId){
+		return addressService.findByCountryId(countryId);
+	}
 }
