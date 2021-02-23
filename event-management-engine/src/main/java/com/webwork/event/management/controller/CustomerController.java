@@ -5,13 +5,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webwork.event.management.dto.ResponseMessage;
+import com.webwork.event.management.entity.User;
 import com.webwork.event.management.entity.VenueBooking;
+import com.webwork.event.management.service.UserService;
 import com.webwork.event.management.service.VenueService;
 
 @RestController
@@ -21,6 +24,17 @@ public class CustomerController {
 	
 	@Autowired
 	private VenueService venueService;
+	
+	@Autowired
+	private UserService userService;
+	
+	
+	@GetMapping("/profile/{Id}")
+	public ResponseEntity<?> getCustomerProfile(@PathVariable("Id") int userId){
+		User user = userService.get(userId);
+		return new ResponseEntity<>(user, HttpStatus.OK);
+	}
+	
 	
 	@PostMapping("/book/decoration")
 	public ResponseEntity<?> bookDecoration(){

@@ -16,6 +16,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
@@ -39,6 +40,7 @@ public class User {
 	@Column(name = "user_email")
 	private String email;
 
+	@JsonIgnore
 	@Column(name = "user_pwd")
 	private String userPwd;
 
