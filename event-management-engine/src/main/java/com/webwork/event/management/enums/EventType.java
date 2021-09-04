@@ -1,0 +1,16 @@
+package com.webwork.event.management.enums;
+
+public enum EventType {
+
+	BIRTHDAY,
+	RECEPTION,
+	SEMINAR,
+	CONFERENCES,
+	EXPOS,
+	PRODUCT_LOUNCHES,
+	CEREMONIES_GALAS,
+	VIP_EVENTS,
+	JOB_FAIRS,
+	RECRUITING_EVENTS,
+	WEDDING
+}
